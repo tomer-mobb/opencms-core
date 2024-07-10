@@ -1,3 +1,4 @@
+<%@ page import="org.springframework.web.util.HtmlUtils" %>
 <%@page import="java.io.UnsupportedEncodingException,
 	org.opencms.i18n.CmsEncoder,
 	org.opencms.editors.tinymce.*,
@@ -539,7 +540,7 @@ function saveContent() {
 
 // Ask user whether he really wants to delete the locale
 function confirmDeleteLocale() {
-	if (confirm("<%= wp.key(org.opencms.workplace.editors.Messages.GUI_EDITOR_MESSAGE_DELETELOCALE_0) %>")) {
+	if (confirm("<%= HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(wp.key(org.opencms.workplace.editors.Messages.GUI_EDITOR_MESSAGE_DELETELOCALE_0))) %>")) {
 		buttonAction(14);
 	}
 }
@@ -720,7 +721,7 @@ tinyMCE.init({
     paste_as_text: <%=""+Boolean.valueOf(OpenCms.getWorkplaceManager().getWorkplaceEditorManager().getEditorConfiguration("tinymce").getParameters().get("paste_text"))%>,
     cmsGalleryEnhancedOptions : <%= options.showElement("gallery.enhancedoptions", displayOptions)%>,
     cmsGalleryUseThickbox : <%= options.showElement("gallery.usethickbox", displayOptions)%>,
-    language : "<%= wp.getLocale().getLanguage() %>",
+    language : "<%= HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(wp.getLocale().getLanguage())) %>",
 	relative_urls: false,
     remove_script_host: false,
 
@@ -845,7 +846,7 @@ function ocmsSave() {
 }
 
 function ocmsExit() {
-	if (!tinyMCE.get('tinymce_content').isDirty() || confirm("<%= wp.key(org.opencms.workplace.editors.Messages.GUI_EDITOR_MESSAGE_EXIT_0)%>")) {
+	if (!tinyMCE.get('tinymce_content').isDirty() || confirm("<%= HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(wp.key(org.opencms.workplace.editors.Messages.GUI_EDITOR_MESSAGE_EXIT_0)))%>")) {
 		execAction(tinyMCE.get('tinymce_content'), '<%= CmsEditor.EDITOR_EXIT %>','_top');
 	}
 }
@@ -900,7 +901,7 @@ function getEditorHeight(){
 <input type="hidden" name="<%= CmsEditor.PARAM_EDITASTEXT %>" value="<%= wp.getParamEditastext() %>">
 <input type="hidden" name="<%= CmsEditor.PARAM_DIRECTEDIT %>" value="<%= wp.getParamDirectedit() %>">
 <input type="hidden" name="<%= CmsDefaultPageEditor.PARAM_OLDELEMENTNAME %>" value="<%= wp.getParamElementname() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_OLDELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>">
+<input type="hidden" name="<%= CmsEditor.PARAM_OLDELEMENTLANGUAGE %>" value="<%= HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(wp.getParamElementlanguage())) %>">
 <input type="hidden" name="<%= CmsEditor.PARAM_BACKLINK %>" value="<%= wp.getParamBacklink() %>">
 <input type="hidden" name="<%= CmsEditor.PARAM_MODIFIED %>" value="<%= wp.getParamModified() %>">
 <input type="hidden" name="content" id="content" >
@@ -920,7 +921,7 @@ if (elementSelection || elementLanguage) {
 		out.println(wp.deleteLocaleButton("javascript:confirmDeleteLocale();", null, "deletelocale", org.opencms.workplace.editors.Messages.GUI_BUTTON_DELETE_0, buttonStyle));
 		out.println(wp.buttonBarSpacer(2));
 	} else {
-		%><input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>"><%
+		%><input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(wp.getParamElementlanguage())) %>"><%
 	}
 	if (elementSelection) {
 		out.println("<td>" + wp.buildSelectElementName("name=\"" + CmsDefaultPageEditor.PARAM_ELEMENTNAME + "\" width=\"150\" onchange=\"buttonAction(3);\"") + "</td>");
@@ -931,7 +932,7 @@ if (elementSelection || elementLanguage) {
 	}
 } else {
 	// build hidden input fields that editor works correctly
-	%><input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>"><input type="hidden" name="<%= CmsDefaultPageEditor.PARAM_ELEMENTNAME %>" value="<%= wp.getParamElementname() %>"><%
+	%><input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(wp.getParamElementlanguage())) %>"><input type="hidden" name="<%= CmsDefaultPageEditor.PARAM_ELEMENTNAME %>" value="<%= wp.getParamElementname() %>"><%
 }
 if (options.showElement("option.properties", displayOptions)) {
 	if (elementLanguage && !elementSelection) {
@@ -944,7 +945,7 @@ if (options.showElement("option.cleanup", displayOptions)) {
 }
 %>
 <td class="maxwidth">&nbsp;</td>
-<%= wp.button("javascript:buttonAction(2);", null, "preview", org.opencms.workplace.editors.Messages.GUI_BUTTON_PREVIEW_0, buttonStyle) %>
+<%= HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(wp.button("javascript:buttonAction(2);", null, "preview", org.opencms.workplace.editors.Messages.GUI_BUTTON_PREVIEW_0, buttonStyle))) %>
 <%= wp.buttonBarSpacer(5) %>
 <%= wp.buttonBar(CmsWorkplace.HTML_END) %>
 
