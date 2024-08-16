@@ -8756,7 +8756,7 @@ public final class CmsDriverManager implements I_CmsEventListener {
                     "Trying to remove user from role that they are not a member of (user: "
                         + username
                         + ", group: "
-                        + groupname
+                        + String.valueOf(groupname).replace("\n", "").replace("\r", "")
                         + ")");
                 skipRemove = true;
             } else {
