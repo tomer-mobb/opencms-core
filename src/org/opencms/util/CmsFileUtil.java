@@ -63,6 +63,7 @@ import java.util.Locale;
 
 import org.apache.commons.collections.Closure;
 import org.apache.commons.logging.Log;
+import java.net.URI;
 
 /**
  * Provides File utility functions.<p>
@@ -888,6 +889,7 @@ public final class CmsFileUtil {
             return null;
         }
 
+        ensurePathIsRelative(startFolder);
         File f = new File(startFolder);
         if (!f.exists() || !f.isDirectory()) {
             return null;
@@ -923,6 +925,37 @@ public final class CmsFileUtil {
         }
 
         return webInfFolder;
+    }
+
+    private static void ensurePathIsRelative(String path) {
+        ensurePathIsRelative(new File(path));
+    }
+
+
+    private static void ensurePathIsRelative(URI uri) {
+        ensurePathIsRelative(new File(uri));
+    }
+
+
+    private static void ensurePathIsRelative(File file) {
+        // Based on https://stackoverflow.com/questions/2375903/whats-the-best-way-to-defend-against-a-path-traversal-attack/34658355#34658355
+        String canonicalPath;
+        String absolutePath;
+    
+        if (file.isAbsolute()) {
+            throw new RuntimeException("Potential directory traversal attempt - absolute path not allowed");
+        }
+    
+        try {
+            canonicalPath = file.getCanonicalPath();
+            absolutePath = file.getAbsolutePath();
+        } catch (IOException e) {
+            throw new RuntimeException("Potential directory traversal attempt", e);
+        }
+    
+        if (!canonicalPath.startsWith(absolutePath) || !canonicalPath.equals(absolutePath)) {
+            throw new RuntimeException("Potential directory traversal attempt");
+        }
     }
 
     public static String toggleTrailingSeparator(String path) {
