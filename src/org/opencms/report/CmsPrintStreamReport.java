@@ -33,6 +33,7 @@ import org.opencms.workplace.CmsWorkplace;
 
 import java.io.PrintStream;
 import java.util.Locale;
+import org.springframework.web.util.HtmlUtils;
 
 /**
  * Stream report where the output is streamed to the given print stream instance.<p>
@@ -134,7 +135,7 @@ public class CmsPrintStreamReport extends CmsHtmlReport {
             case FORMAT_OK:
             case FORMAT_DEFAULT:
             default:
-                m_printStream.print(value);
+                m_printStream.print(HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(value)));
         }
         setLastEntryTime(System.currentTimeMillis());
     }
