@@ -978,6 +978,10 @@ public final class CmsXmlUtils {
         }
 
         try {
+            reader.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+            reader.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+            reader.setFeature("http://xml.org/sax/features/external-general-entities", false);
+            reader.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
             reader.parse(new InputSource(xmlStream));
         } catch (IOException e) {
             // should not happen since we read form a byte array
