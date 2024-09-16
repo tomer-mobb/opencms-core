@@ -55,6 +55,7 @@ import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
 import org.apache.commons.logging.Log;
+import org.apache.commons.text.StringEscapeUtils;
 
 /**
  * Contains all methods to synchronize the VFS with the "real" FS.<p>
@@ -151,7 +152,7 @@ public class CmsSynchronize {
             while (i.hasNext()) {
                 // iterate all source folders
                 String sourcePathInVfs = i.next();
-                String destPath = m_destinationPathInRfs + sourcePathInVfs.replace('/', File.separatorChar);
+                String destPath = StringEscapeUtils.escapeHtml4(String.valueOf(m_destinationPathInRfs)) + sourcePathInVfs.replace('/', File.separatorChar);
 
                 report.println(
                     org.opencms.workplace.threads.Messages.get().container(
