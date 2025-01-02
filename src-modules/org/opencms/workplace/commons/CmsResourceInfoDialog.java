@@ -42,6 +42,7 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.PageContext;
+import org.springframework.web.util.HtmlUtils;
 
 /**
  * Dialog to edit new or existing user in the administration view.<p>
@@ -143,9 +144,9 @@ public class CmsResourceInfoDialog extends CmsWidgetDialog {
         // if adminProject is set, go back to the project file list in the administration
         String adminProject = getJsp().getRequest().getParameter(CmsToolDialog.PARAM_ADMIN_PROJECT);
         if ((adminProject != null) && CmsUUID.isValidUUID(adminProject)) {
-            String upLevelLink = OpenCms.getLinkManager().substituteLink(
+            String upLevelLink = HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(String.valueOf(OpenCms.getLinkManager().substituteLink(
                 getCms(),
-                "/system/workplace/views/admin/admin-main.jsp")
+                "/system/workplace/views/admin/admin-main.jsp"))))
                 + "?path=%2Fprojects%2Ffiles&action=initial&projectid="
                 + adminProject;
             return upLevelLink;
