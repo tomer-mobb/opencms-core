@@ -183,7 +183,7 @@ public class CmsProjectHistoryTable extends Table {
                         item.getItemProperty(CmsProjectsTable.PROP_USER).setValue(
                             cms.readGroup(project.getGroupId()).getSimpleName());
                     } catch (CmsException e) {
-                        LOG.warn(e.getLocalizedMessage(), e);
+                        LOG.warn("Unexpected error: mobb-a23ebfd047adad3e597b61de4aa4c811", e);
                     }
                     item.getItemProperty(CmsProjectsTable.PROP_DATE_CREATED).setValue(
                         new Date(project.getDateCreated()));
