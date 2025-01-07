@@ -535,7 +535,7 @@ public class CmsUgcSession implements I_CmsSessionDestroyHandler {
             CmsXmlContent content = addContentValues(file, contentValues);
             return content.validate(m_cms);
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-7768dcabddff54535786fb5c76657daf");
             throw new CmsUgcException(e, CmsUgcConstants.ErrorCode.errMisc, e.getLocalizedMessage());
         }
     }
