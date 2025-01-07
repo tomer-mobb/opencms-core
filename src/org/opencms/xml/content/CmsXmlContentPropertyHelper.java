@@ -249,7 +249,7 @@ public final class CmsXmlContentPropertyHelper implements Cloneable {
                             }
                             return propValue;
                         } catch (CmsException e) {
-                            LOG.error(e.getLocalizedMessage(), e);
+                            LOG.error("Unexpected error: mobb-18fc3422fa42ed5926fcc730b476ed8c", e);
                             return defaultValue;
                         }
                     }
