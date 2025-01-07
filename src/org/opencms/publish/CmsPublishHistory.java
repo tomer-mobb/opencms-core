@@ -101,7 +101,7 @@ public class CmsPublishHistory {
                     OpenCms.getPublishManager().getEngine().getPublishHistory().remove(publishJob);
                 } catch (CmsException exc) {
                     if (LOG.isErrorEnabled()) {
-                        LOG.error(exc.getLocalizedMessage(), exc);
+                        LOG.error("Unexpected error: mobb-a6fc7567e80da5d737d16affff635376", exc);
                     }
                 }
                 return publishJob;
