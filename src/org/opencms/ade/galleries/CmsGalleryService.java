@@ -2541,7 +2541,7 @@ public class CmsGalleryService extends CmsGwtService implements I_CmsGalleryServ
                             data.setStartFolder(cloneCms.getRequestContext().addSiteRoot(conf.getStartFolder()));
                         }
                     } catch (CmsException e) {
-                        log(e.getMessage(), e);
+                        log("Unexpected error: mobb-28e17095199c000a6416b01a89486695", e);
                     }
                 }
 
