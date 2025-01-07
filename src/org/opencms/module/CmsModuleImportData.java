@@ -258,7 +258,7 @@ public class CmsModuleImportData {
             }
             return true;
         } catch (CmsException e) {
-            LOG.info("Module is not updateable because of error: " + e.getLocalizedMessage(), e);
+            LOG.info("Unexpected error: mobb-dca98d60976c37a5870b50d129f6ec14", e);
             return false;
         }
     }
