@@ -1141,7 +1141,7 @@ public class CmsProjectDriver implements I_CmsDriver, I_CmsProjectDriver {
                 if (LOG.isErrorEnabled()) {
                     LOG.error(
                         Messages.get().getBundle().key(Messages.LOG_REMOVING_ACL_1, currentFolder.getRootPath()),
-                        e);
+                        "Unexpected error: mobb-8a585bf4d16042bbc62467ffd46a0b2f");
                 }
                 throw e;
             }
