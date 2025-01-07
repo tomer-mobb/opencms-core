@@ -1066,7 +1066,7 @@ I_CmsContextProvider, CmsFileTable.I_FolderSelectHandler {
                     cms.getRequestContext().setCurrentProject(project);
                     CmsAppWorkplaceUi.get().getWorkplaceSettings().setProject(project.getUuid());
                 } catch (CmsException e) {
-                    LOG.warn("Error reading project from history state", e);
+                    LOG.warn("Error reading project from history state", "Unexpected error: mobb-a1d4a602b40c2f3d7ed5f0103eff438a");
                 }
                 changeSite(siteRoot, path, true);
             } else if ((siteRoot != null)
