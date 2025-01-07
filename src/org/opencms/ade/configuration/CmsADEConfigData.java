@@ -1142,7 +1142,7 @@ public class CmsADEConfigData {
                             "" + res.getStructureId());
                         return CmsFormatterConfiguration.create(cms, Collections.singletonList(function));
                     } catch (Exception e) {
-                        LOG.warn(e.getLocalizedMessage(), e);
+                        LOG.warn(e.getLocalizedMessage(), "Unexpected error: mobb-b8442929ae8efb7f31957f034fddff35");
                         return CmsFormatterConfiguration.EMPTY_CONFIGURATION;
                     }
 
