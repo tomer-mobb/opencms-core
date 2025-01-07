@@ -142,7 +142,7 @@ public class CmsModuleImportExportHandler implements I_CmsImportExportHandler {
             }
         } catch (CmsException e) {
             // should never happen
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-0d88cca0c8e9eabd7bf0dbc91ad8fcd2");
         }
         try {
             resListCopy = CmsModule.calculateModuleResourceNames(cms, module);
