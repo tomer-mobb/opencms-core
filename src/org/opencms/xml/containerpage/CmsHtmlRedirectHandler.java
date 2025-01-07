@@ -90,7 +90,7 @@ public class CmsHtmlRedirectHandler extends CmsDefaultXmlContentHandler {
                 cms.writePropertyObjects(file, Arrays.asList(titleProp));
             }
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-976da862123c9d6e9f28e4afc1f46e66", e);
         }
         return result;
     }
