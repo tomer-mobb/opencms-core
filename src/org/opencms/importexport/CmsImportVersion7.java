@@ -1922,7 +1922,7 @@ public class CmsImportVersion7 implements I_CmsImport {
             CmsMessageContainer message = Messages.get().container(
                 Messages.ERR_IMPORTEXPORT_ERROR_IMPORTING_RESOURCES_0);
             if (LOG.isDebugEnabled()) {
-                LOG.debug(message.key(), e);
+                LOG.debug(message.key(), "Unexpected error: mobb-06c2a03b105cd3238356716b0d35ca11");
             }
 
             return;
