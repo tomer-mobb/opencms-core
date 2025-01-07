@@ -151,7 +151,7 @@ public class CmsAjaxImageGallery extends A_CmsAjaxGallery {
                 CmsResourceTypeImage.getStaticTypeName()).getTypeId();
         } catch (CmsLoaderException e1) {
             // should really never happen
-            LOG.warn(e1.getLocalizedMessage(), e1);
+            LOG.warn("Unexpected error: mobb-c7cd4b964d5c18a84d2650319617c462", e1);
             imageId = CmsResourceTypeImage.getStaticTypeId();
         }
         return imageId;
