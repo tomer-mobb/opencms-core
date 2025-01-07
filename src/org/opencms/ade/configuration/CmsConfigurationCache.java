@@ -814,7 +814,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                         CmsSitePlugin sitePlugin = CmsSitePlugin.read(m_cms, res);
                         result.put(res.getStructureId(), sitePlugin);
                     } catch (Exception e) {
-                        LOG.error(e.getMessage(), e);
+                        LOG.error("Unexpected error: mobb-95f87724b52d418c5998e967930c33bd", e);
                     }
                 }
             } catch (CmsException e) {
