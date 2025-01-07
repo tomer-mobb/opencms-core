@@ -545,7 +545,7 @@ public class CmsGalleryOptimizeDialog extends CmsBasicDialog {
                 m_dateLastModified = Long.valueOf(m_resource.getDateLastModified());
                 m_isUsed = Boolean.valueOf(!((relations == null) || relations.isEmpty()));
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-00a1084090d91df67a1ddb27b2588267", e);
             }
         }
 
