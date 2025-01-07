@@ -10235,7 +10235,7 @@ public final class CmsDriverManager implements I_CmsEventListener {
                                 Messages.get().getBundle().key(
                                     Messages.LOG_WRITE_EXPORT_POINT_ERROR_1,
                                     currentPublishedResource.getRootPath()),
-                                e);
+                                "Unexpected error: mobb-61c69c703ac6f2bcd7aa6b88d8d2d875");
                         }
                         report.println(
                             org.opencms.report.Messages.get().container(org.opencms.report.Messages.RPT_FAILED_0),
