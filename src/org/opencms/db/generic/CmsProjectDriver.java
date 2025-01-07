@@ -1177,7 +1177,7 @@ public class CmsProjectDriver implements I_CmsDriver, I_CmsProjectDriver {
                     onlineProject,
                     new CmsAliasFilter(null, null, currentFolder.getStructureId()));
             } catch (CmsDataAccessException e) {
-                LOG.error("Could not delete aliases: " + e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-6b59fbbf91181ae701458ae8dff26e5f", e);
             }
 
             report.println(
