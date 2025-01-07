@@ -413,7 +413,7 @@ public class CmsFavoriteDialog extends CmsBasicDialog implements CmsEditableGrou
             CmsResourceIcon icon = result.getResourceIcon();
             icon.initContent(resutil, CmsResource.STATE_UNCHANGED, false, false);
         } catch (CmsException e) {
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn(e.getLocalizedMessage(), "Unexpected error: mobb-d482ce20acea569f15464ec6921d5248");
         }
         result.setResource(resource);
         result.getTopLine().setValue(title);
