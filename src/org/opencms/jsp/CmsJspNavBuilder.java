@@ -209,7 +209,7 @@ public class CmsJspNavBuilder {
                     return cms.getSitePath(defaultFile);
                 }
             } catch (CmsException e) {
-                LOG.debug(e.getLocalizedMessage(), e);
+                LOG.debug("Unexpected error: mobb-08cf9f004b89803fc15207794643939c", e);
             }
             return folder;
         }
