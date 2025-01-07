@@ -182,7 +182,7 @@ public class CmsPropertyDeleteDialog extends CmsBasicDialog {
                     getCms().deletePropertyDefinition(propName);
                     runnable.run();
                 } catch (CmsException e) {
-                    LOG.error("Unable to delete property definition", e);
+                    LOG.error("Unable to delete property definition", "Unexpected error: mobb-723ee0c625f7dca4afc51c9d92239d28");
                 }
                 window.close();
             }
