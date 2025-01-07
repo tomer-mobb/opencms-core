@@ -177,7 +177,7 @@ public class CmsVfsIndexer implements I_CmsIndexer {
                     Messages.ERR_INDEXSOURCE_INDEXER_CLASS_NAME_2,
                     getClass().getName(),
                     CmsVfsIndexer.class),
-                e);
+                "Unexpected error: mobb-7da0ed5e968a792ac70a91f3f334e2d3");
         }
         return indexer;
     }
