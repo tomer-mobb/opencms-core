@@ -1297,7 +1297,7 @@ public abstract class A_CmsResourceType implements I_CmsResourceType {
                         }
                     } catch (CmsRuntimeException e) {
                         if (LOG.isWarnEnabled()) {
-                            LOG.warn(e.getLocalizedMessage(), e);
+                            LOG.warn("Unexpected error: mobb-8aeb829ae98b7b94ee7eeb23346bf2bb", e);
                         }
                     }
                 }
