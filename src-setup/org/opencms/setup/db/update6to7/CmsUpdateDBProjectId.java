@@ -511,7 +511,7 @@ public class CmsUpdateDBProjectId extends A_CmsUpdateDBPart {
         if (!isKeepHistory()) {
             return;
         }
-        System.out.println(new Exception().getStackTrace()[0].toString());
+        System.out.println("Unexpected error: mobb-10d2d6fe5662c3a6c92ba4377ef25561");
         // Get the data from the CMS_BACKUP table
         String query = readQuery(QUERY_SELECT_DATA_FROM_BACKUP_PROJECTS);
         CmsSetupDBWrapper db = null;
