@@ -292,7 +292,7 @@ public class CmsResourceTypeXmlContent extends A_CmsResourceTypeLinkParseable {
                     CmsLockUtil.ensureLock(cms, page);
                     cms.deleteResource(page, CmsResource.DELETE_PRESERVE_SIBLINGS);
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-45cc5b7702d89369627b8fa0980f2575", e);
                 }
             }
         }
