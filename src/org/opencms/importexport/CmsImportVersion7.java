@@ -3150,7 +3150,7 @@ public class CmsImportVersion7 implements I_CmsImport {
                         Messages.get().getBundle().key(
                             Messages.LOG_IMPORTEXPORT_ERROR_ON_TEST_IMMUTABLE_1,
                             resourceName),
-                        e);
+                        "Unexpected error: mobb-d3c537eeaca22e3fb5649c5c811b438f");
                 }
             } finally {
                 getCms().getRequestContext().setSiteRoot(storedSiteRoot);
