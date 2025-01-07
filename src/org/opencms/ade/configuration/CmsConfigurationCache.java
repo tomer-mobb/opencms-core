@@ -818,7 +818,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                     }
                 }
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-01511a96020db11ddb4f61c62e5b594d", e);
             }
         }
         return Collections.unmodifiableMap(result);
