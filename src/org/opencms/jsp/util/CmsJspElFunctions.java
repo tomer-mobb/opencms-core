@@ -136,7 +136,7 @@ public final class CmsJspElFunctions {
                         OpenCms.getSiteManager().matchRequest((HttpServletRequest)req).getSiteRoot());
                 }
             } catch (CmsException e) {
-                LOG.warn(e.getLocalizedMessage(), e);
+                LOG.warn("Unexpected error: mobb-7f89533e99b4644fac571c7bad4f953e", e);
                 result = null;
             }
         }
