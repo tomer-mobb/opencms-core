@@ -171,7 +171,7 @@ public class CmsAjaxLinkGallery extends A_CmsAjaxGallery {
             LOG.error(e.getLocalizedMessage(), e);
         } catch (JSONException e) {
             if (LOG.isErrorEnabled()) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-2adf5a60f018ad44009e18c8536d65a4");
             }
         }
 
