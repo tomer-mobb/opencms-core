@@ -157,7 +157,7 @@ public class CmsGallerySearchResult implements Comparable<CmsGallerySearchResult
         try {
             m_resourceType = OpenCms.getResourceManager().getResourceType(res.getTypeId()).getTypeName();
         } catch (CmsLoaderException e) {
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn("Unexpected error: mobb-bb0b73773df8d43599097af8d2437c82", e);
         }
         m_state = res.getState().getState();
         m_structureId = res.getStructureId().toString();
