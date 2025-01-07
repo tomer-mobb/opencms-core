@@ -560,7 +560,7 @@ public class CmsCopyMoveDialog extends CmsBasicDialog {
                             + m_actionCombo.getValue().toString()
                             + " on resource "
                             + source.getRootPath(),
-                        e);
+                        "Unexpected error: mobb-9e5955f326a6661dd129b2de0aa4c7a4");
                 }
             }
 
