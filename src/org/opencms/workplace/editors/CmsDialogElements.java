@@ -177,7 +177,7 @@ public class CmsDialogElements extends CmsDialog {
                     false).getValue(null);
             } catch (CmsException e) {
                 if (LOG.isWarnEnabled()) {
-                    LOG.warn(e.getLocalizedMessage(), e);
+                    LOG.warn("Unexpected error: mobb-47a72a686fed59be9f53d46f6efaac00", e);
                 }
             }
             if (elements != null) {
