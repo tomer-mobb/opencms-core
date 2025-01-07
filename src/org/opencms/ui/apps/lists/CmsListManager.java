@@ -1696,7 +1696,7 @@ I_CmsCachableApp, I_CmsResultFacetsManager {
         } catch (CmsSearchException e) {
             CmsErrorDialog.showErrorDialog(e);
 
-            LOG.error("Error executing search.", e);
+            LOG.error("Error executing search.", "Unexpected error: mobb-1d38bfec590b5cfd92f9f0beee53ebe4");
         }
     }
 
