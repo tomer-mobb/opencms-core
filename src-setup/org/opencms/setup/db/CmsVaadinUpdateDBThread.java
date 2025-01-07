@@ -31,9 +31,12 @@ import org.opencms.setup.CmsUpdateBean;
 import org.opencms.ui.report.CmsStreamReportWidget;
 
 import java.io.PrintStream;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class CmsVaadinUpdateDBThread extends Thread {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsVaadinUpdateDBThread.class);
     /** Saves the System.err stream so it can be restored. */
     public PrintStream m_tempErr;
 
@@ -85,7 +88,7 @@ public class CmsVaadinUpdateDBThread extends Thread {
                 dbMan.initialize(m_updateBean);
                 dbMan.run();
             } catch (Exception e) {
-                e.printStackTrace();
+                log4jLogger.error("Unexpected error: mobb-6040e5cc8cf6a42bb524d94c136cd04b");
             }
 
             System.out.println("... DB Update finished.");
