@@ -722,7 +722,7 @@ public class CmsPropertyAdvanced extends CmsTabDialog implements I_CmsDialogHand
             } catch (ClassNotFoundException e) {
                 LOG.error("Upload handler class not found: " + uploadHandlerName, e);
             } catch (IllegalAccessException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-16f75edb067512738698506e98b8720c");
             }
         }
     }
