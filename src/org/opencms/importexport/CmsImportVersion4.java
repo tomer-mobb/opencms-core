@@ -672,7 +672,7 @@ public class CmsImportVersion4 extends A_CmsImport {
                 }
             }
         } catch (Exception e) {
-            m_report.println(e);
+            m_report.println("Unexpected error: mobb-9a15ae7a3cb2427c2a9a8fdb06019b3b");
             m_report.addError(e);
 
             CmsMessageContainer message = Messages.get().container(
