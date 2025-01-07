@@ -3693,7 +3693,7 @@ public class CmsProjectDriver implements I_CmsDriver, I_CmsProjectDriver {
             if (LOG.isErrorEnabled()) {
                 LOG.error(
                     Messages.get().getBundle().key(Messages.LOG_REMOVING_RELATIONS_1, offlineResource.toString()),
-                    e);
+                    "Unexpected error: mobb-649e0cb405b6ebad7f80543698338840");
             }
             throw e;
         }
