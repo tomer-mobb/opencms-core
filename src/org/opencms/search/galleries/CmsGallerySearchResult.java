@@ -586,7 +586,7 @@ public class CmsGallerySearchResult implements Comparable<CmsGallerySearchResult
             return res;
         } catch (CloneNotSupportedException e) {
             // shouldn't happen
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-73b00a3f17d2fa6a26957abcc643b653", e);
             return null;
         }
     }
