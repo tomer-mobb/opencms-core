@@ -252,7 +252,7 @@ public class CmsPublishQueue {
             }
         } catch (CmsException exc) {
             if (LOG.isErrorEnabled()) {
-                LOG.error(exc.getLocalizedMessage(), exc);
+                LOG.error("Unexpected error: mobb-c566906820bc398a21133261d44d9c30", exc);
             }
         }
     }
