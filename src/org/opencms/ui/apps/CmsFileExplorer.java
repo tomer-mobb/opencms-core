@@ -1112,7 +1112,7 @@ I_CmsContextProvider, CmsFileTable.I_FolderSelectHandler {
             m_fileTable.fillTable(cms, folderResources);
         } catch (CmsException e) {
             CmsErrorDialog.showErrorDialog(e);
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-e503334f166cb9bc7836e33e6bc5c472", e);
         }
     }
 
