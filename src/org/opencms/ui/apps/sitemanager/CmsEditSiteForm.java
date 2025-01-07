@@ -1030,7 +1030,7 @@ public class CmsEditSiteForm extends CmsBasicDialog {
             }
 
         } catch (CmsException e) {
-            LOG.error("Can not initialize CmsObject", e);
+            LOG.error("Can not initialize CmsObject", "Unexpected error: mobb-f00ecbde98627b65621aff162ec0ea68");
         }
         m_ok.setEnabled(true);
         m_infoSiteRoot.setVisible(false);
