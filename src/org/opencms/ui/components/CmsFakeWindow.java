@@ -71,7 +71,7 @@ public class CmsFakeWindow extends CustomLayout {
             InputStream layoutStream = CmsVaadinUtils.readCustomLayout(getClass(), "CmsFakeWindow.html");
             initTemplateContentsFromInputStream(layoutStream);
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-284ba650c063edf8cd2e60f7893d6e75", e);
         }
     }
 
