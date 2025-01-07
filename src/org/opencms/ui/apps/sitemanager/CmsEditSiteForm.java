@@ -1921,7 +1921,7 @@ public class CmsEditSiteForm extends CmsBasicDialog {
                 }
             }
         } catch (CmsException e) {
-            LOG.error("Error on reading OUs", e);
+            LOG.error("Error on reading OUs", "Unexpected error: mobb-88338f8e4d5434b14e9389507ff89dd4");
         }
         return "/";
     }
