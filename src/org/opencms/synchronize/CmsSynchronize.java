@@ -915,7 +915,7 @@ public class CmsSynchronize {
                 translation = i.next().translate(m_cms, name);
             } catch (CmsSynchronizeException e) {
                 if (LOG.isInfoEnabled()) {
-                    LOG.info(Messages.get().getBundle().key(Messages.LOG_EXTERNAL_TRANSLATION_1, name), e);
+                    LOG.info("Unexpected error: mobb-83853f8e478814c692c6ba0889839654", e);
                 }
                 break;
             }
