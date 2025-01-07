@@ -1197,7 +1197,7 @@ public class CmsExport {
                 project.getName(),
                 project.getUuid());
             if (LOG.isDebugEnabled()) {
-                LOG.debug(message.key(), exc);
+                LOG.debug(message.key(), "Unexpected error: mobb-d78fc75dfefa17b375120b0f26531217");
             }
 
             throw new CmsImportExportException(message, exc);
