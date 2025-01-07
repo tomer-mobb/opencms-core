@@ -2751,15 +2751,7 @@ public class CmsMemoryMonitor implements I_CmsScheduledJob {
 
             );
             LOG.info(
-                Messages.get().getBundle().key(
-                    Messages.LOG_MM_WARNING_MEM_STATUS_AVG_6,
-                    new Object[] {
-                        new Long(m_memoryAverage.getMaxMemory()),
-                        new Long(m_memoryAverage.getTotalMemory()),
-                        new Long(m_memoryAverage.getFreeMemory()),
-                        new Long(m_memoryAverage.getUsedMemory()),
-                        new Long(m_memoryAverage.getUsage()),
-                        new Integer(m_memoryAverage.getCount())}));
+                "Unexpected error: mobb-3cc29998a2da6906b0a90a217574d1dc");
 
             CmsSessionManager sm = OpenCms.getSessionManager();
 
