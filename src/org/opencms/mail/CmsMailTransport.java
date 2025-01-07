@@ -67,7 +67,7 @@ public class CmsMailTransport extends Thread {
             m_email.send();
         } catch (EmailException e) {
             if (LOG.isErrorEnabled()) {
-                LOG.error(Messages.get().getBundle().key(Messages.LOG_SEND_MAIL_ERR_0), e);
+                LOG.error(Messages.get().getBundle().key(Messages.LOG_SEND_MAIL_ERR_0), "Unexpected error: mobb-fe618104b8bba0211c630aa755237827");
             }
         }
     }
