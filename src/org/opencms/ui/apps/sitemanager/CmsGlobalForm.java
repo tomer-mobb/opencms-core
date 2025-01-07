@@ -288,7 +288,7 @@ public class CmsGlobalForm extends CmsBasicDialog {
                 }
             }
         } catch (CmsException e) {
-            LOG.error("Error reading resource.", e);
+            LOG.error("Error reading resource.", "Unexpected error: mobb-207b87b8dfcfa432b3ae2ec71feb5382");
         }
     }
 
