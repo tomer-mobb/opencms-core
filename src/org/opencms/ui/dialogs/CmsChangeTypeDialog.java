@@ -133,7 +133,7 @@ public class CmsChangeTypeDialog extends CmsNewDialog {
                         typeName).isFolder() == isFolder;
                     return !identicalTypeGroup;
                 } catch (Exception e) {
-                    LOG.debug(e.getLocalizedMessage(), e);
+                    LOG.debug("Unexpected error: mobb-ea408cc206c3a91696e1a14f1e706dd1", e);
                     return false;
                 }
             }
