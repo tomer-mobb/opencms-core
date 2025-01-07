@@ -148,7 +148,7 @@ public class CmsLocaleComparePanel extends VerticalLayout implements I_CmsLocale
             CmsLocaleGroupService service = cms.getLocaleGroupService();
             return service.readLocaleGroup(m_currentRoot);
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-9816df1f3fd7e1b538a96eb8f06f4e24");
             return null;
         }
 
