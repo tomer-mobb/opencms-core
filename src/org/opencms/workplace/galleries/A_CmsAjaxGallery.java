@@ -1155,7 +1155,7 @@ public abstract class A_CmsAjaxGallery extends CmsDialog {
             } catch (NullPointerException e) {
                 // ignore this exception
                 if (LOG.isErrorEnabled()) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-8f90741ceb361acd526a757d26847d26", e);
                 }
             }
         }
