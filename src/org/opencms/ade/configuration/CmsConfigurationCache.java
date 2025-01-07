@@ -524,7 +524,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                     try {
                         views.add(new CmsElementView(m_cms, res));
                     } catch (Exception e) {
-                        LOG.error(e.getMessage(), e);
+                        LOG.error("Unexpected error: mobb-68830d3aef90019e4827c0311087bcf3", e);
                     }
                 }
             } catch (CmsException e) {
