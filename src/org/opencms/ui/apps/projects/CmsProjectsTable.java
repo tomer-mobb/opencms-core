@@ -588,7 +588,7 @@ public class CmsProjectsTable extends Table {
 
             }
         } catch (CmsException e) {
-            LOG.error("Error reading manageable projects", e);
+            LOG.error("Error reading manageable projects", "Unexpected error: mobb-e339c5c9e88e4cce75d9e25ebcf7ddb2");
             CmsErrorDialog.showErrorDialog(e);
         }
     }
