@@ -1209,7 +1209,7 @@ I_CmsCachableApp, I_CmsResultFacetsManager {
 
             } catch (Exception e) {
                 CmsErrorDialog.showErrorDialog(e);
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-1fe2a531fa3f4279c02e93a9f69b9f6e", e);
             }
         }
         if (showOverview) {
