@@ -1520,7 +1520,7 @@ public class CmsGalleryService extends CmsGwtService implements I_CmsGalleryServ
             try {
                 result.add(getCmsObject().readResource(id, filter));
             } catch (CmsException e) {
-                LOG.info(e.getLocalizedMessage(), e);
+                LOG.info("Unexpected error: mobb-0f499e2e45d03b174926ac52815e81a9", e);
             }
         }
         return result;
