@@ -806,7 +806,7 @@ public final class CmsPublishEngine {
             }
         } catch (CmsException e) {
             dbc.rollback();
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-b9aefcd4d8fe4292fea3b7486be503d9", e);
             throw e;
         } finally {
             dbc.clear();
