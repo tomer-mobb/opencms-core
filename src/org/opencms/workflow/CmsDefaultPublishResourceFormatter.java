@@ -285,7 +285,7 @@ public class CmsDefaultPublishResourceFormatter implements I_CmsPublishResourceF
                     false,
                     CmsResourceFilter.ALL);
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-ee8e043fbf6098d8b0bd8afe74eb777a", e);
                 return true;
             }
         }
