@@ -630,7 +630,7 @@ public class CmsGallerySearchResult implements Comparable<CmsGallerySearchResult
                 }
             }
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-81b880d84a9cd10e7d03cadac442c08f", e);
             return;
         }
     }
