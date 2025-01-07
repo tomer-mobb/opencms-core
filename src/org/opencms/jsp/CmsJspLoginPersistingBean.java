@@ -148,7 +148,7 @@ public class CmsJspLoginPersistingBean extends CmsJspLoginBean {
                         getRequest().getCookies(),
                         CmsPersistentLoginAuthorizationHandler.COOKIE_NAME));
             } catch (Exception e) {
-                LOG.error("Could not invalidate tokens for user " + user, e);
+                LOG.error("Could not invalidate tokens for user " + user, "Unexpected error: mobb-b4ff073bf01ff71dcf639b3174df2371");
             }
 
         }
