@@ -203,7 +203,7 @@ public final class CmsSolrSpellchecker {
             final JSONObject jsonRequest = new JSONObject(requestBody);
             cmsSpellcheckingRequest = parseJsonRequest(jsonRequest);
         } catch (Exception e) {
-            LOG.debug(e.getMessage(), e);
+            LOG.debug(e.getMessage(), "Unexpected error: mobb-8e38322023c5d6a18b5117224e1b021b");
             cmsSpellcheckingRequest = parseHttpRequest(servletRequest, cms);
         }
 
