@@ -329,7 +329,7 @@ public class CmsSourceSearchForm extends VerticalLayout {
                                 settings.getSearchpattern().indexOf("<uuid>") + 6,
                                 settings.getSearchpattern().indexOf("</uuid>")))).getRootPath());
             } catch (CmsException e) {
-                LOG.error("Unable to read resource", e);
+                LOG.error("Unable to read resource", "Unexpected error: mobb-f44cba08c7800806635fd22ad7d4b0eb");
             }
 
         }
