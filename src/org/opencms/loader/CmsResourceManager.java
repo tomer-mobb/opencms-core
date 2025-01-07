@@ -622,7 +622,7 @@ public class CmsResourceManager {
                             + resType.getTypeName()
                             + ", "
                             + e.getLocalizedMessage(),
-                        e);
+                        "Unexpected error: mobb-59b2600884657e9269944c793663ef89");
                 }
             }
         }
