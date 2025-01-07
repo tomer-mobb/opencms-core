@@ -589,7 +589,7 @@ public class CmsFlexCache extends Object implements I_CmsEventListener {
                     m_bucketConfiguration = CmsFlexBucketConfiguration.loadFromVfsFile(m_cmsObject, path);
                 }
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-2ce3b0e574a0a60335b0d57e8e5ad799", e);
             }
         } catch (Exception e) {
             LOG.error(e.getLocalizedMessage(), e);
