@@ -113,7 +113,7 @@ public class CmsUpdateDBCmsUsers extends org.opencms.setup.db.update6to7.CmsUpda
                 System.out.println("table " + CHECK_CMS_USERDATA + " already exists");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log4jLogger.error("Unexpected error: mobb-e5215be61a52f4279c1089cddfdfeea4");
         }
         try {
             // Check if the CMS_USERDATA table exists
