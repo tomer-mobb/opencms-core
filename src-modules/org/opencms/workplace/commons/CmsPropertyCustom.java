@@ -356,7 +356,7 @@ public class CmsPropertyCustom extends CmsPropertyAdvanced {
         } catch (CmsException e) {
             // should usually never happen
             if (LOG.isInfoEnabled()) {
-                LOG.info(e.getLocalizedMessage());
+                LOG.info("Unexpected error: mobb-0825e22e7d8bf8782b0277e1766a015f");
             }
         }
         if (navPos == null) {
