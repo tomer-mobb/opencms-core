@@ -806,7 +806,7 @@ public class CmsJspNavBuilder {
             resources = m_cms.getResourcesInFolder(folder, resourceFilter);
         } catch (Exception e) {
             // should never happen
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-10cfb72edefb26b34b5d2b45dfe47e21", e);
             return Collections.<CmsJspNavElement> emptyList();
         }
 
