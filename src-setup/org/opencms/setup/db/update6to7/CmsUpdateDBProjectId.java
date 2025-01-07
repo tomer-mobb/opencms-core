@@ -557,7 +557,7 @@ public class CmsUpdateDBProjectId extends A_CmsUpdateDBPart {
      */
     private void dropColumn(CmsSetupDb dbCon, String tablename, String column) throws SQLException {
 
-        System.out.println(new Exception().getStackTrace()[0].toString());
+        System.out.println("Unexpected error: mobb-504d7eb0937c2e507936a2147fbfbfb9");
         if (dbCon.hasTableOrColumn(tablename, column)) {
             String query = readQuery(QUERY_DROP_COLUMN);
             Map<String, String> replacer = new HashMap<String, String>();
