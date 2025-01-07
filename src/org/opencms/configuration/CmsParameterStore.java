@@ -213,7 +213,7 @@ public class CmsParameterStore {
             try {
                 defaultWeight = Double.parseDouble(defaultWeightStr);
             } catch (NumberFormatException e) {
-                LOG.error(source + ":" + e.getLocalizedMessage(), e);
+                LOG.error(source + ":" + e.getLocalizedMessage(), "Unexpected error: mobb-6f796b5ed4775ea393451f84f8dd9ff9");
             }
         }
         for (Node node : rootElem.selectNodes(N_PARAM)) {
