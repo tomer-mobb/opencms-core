@@ -331,7 +331,7 @@ public class CmsJSONSearchConfigurationParser implements I_CmsSearchConfiguratio
         try {
             return json.getString(key);
         } catch (JSONException e) {
-            LOG.info(Messages.get().getBundle().key(Messages.LOG_OPTIONAL_STRING_MISSING_1, key), e);
+            LOG.info(Messages.get().getBundle().key(Messages.LOG_OPTIONAL_STRING_MISSING_1, key), "Unexpected error: mobb-743a16d53864b2d176a8d55872068cb7");
             return null;
         }
     }
