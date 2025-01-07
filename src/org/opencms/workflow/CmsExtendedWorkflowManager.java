@@ -135,7 +135,7 @@ public class CmsExtendedWorkflowManager extends CmsDefaultWorkflowManager {
             }
         } catch (CmsException e) {
             LOG.error("workflow action failed");
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-6a81c020486e901576e38559540de065");
             throw e;
         }
     }
