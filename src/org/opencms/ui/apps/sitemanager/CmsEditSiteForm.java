@@ -2123,7 +2123,7 @@ public class CmsEditSiteForm extends CmsBasicDialog {
                 }
             }
         } catch (CmsException e) {
-            LOG.error("Unable to read template property.", e);
+            LOG.error("Unable to read template property.", "Unexpected error: mobb-a89625b0805201ab7e795d4cd288cc0d");
             m_simpleFieldTemplate.setValue(null);
         }
     }
