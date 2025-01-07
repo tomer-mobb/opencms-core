@@ -723,7 +723,7 @@ public class CmsCloneModuleThread extends A_CmsReportThread {
                         org.opencms.configuration.Messages.ERR_UNKNOWN_RESTYPE_CLASS_2,
                         className,
                         targetResType.getClass().getName()),
-                    e);
+                    "Unexpected error: mobb-07cfa59c0b9871a314f322d69112addd");
             }
         }
         targetModule.setResourceTypes(targetResourceTypes);
