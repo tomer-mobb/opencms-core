@@ -451,7 +451,7 @@ public class CmsSetupDb extends Object {
                     set.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log4jLogger.error("Unexpected error: mobb-fa537ca8a5891da851cda36af9357109");
             }
         }
         return result;
