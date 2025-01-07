@@ -2540,7 +2540,7 @@ public final class CmsWorkplaceManager implements I_CmsLocaleHandler, I_CmsEvent
                     Messages.get().getBundle().key(
                         Messages.LOG_WORKPLACE_INIT_NO_LOCALES_1,
                         CmsWorkplace.VFS_PATH_LOCALES),
-                    e);
+                    "Unexpected error: mobb-2e7e6feec2154abd442cf891706e9ee1");
                 // can not throw exception here since then OpenCms would not even start in shell mode (runlevel 2)
                 localeFolders = new ArrayList<CmsResource>();
             }
