@@ -848,7 +848,7 @@ public class CmsUgcSession implements I_CmsSessionDestroyHandler {
             try {
                 m_cms.deleteResource(m_cms.getSitePath(prevUploadResource), CmsResource.DELETE_PRESERVE_SIBLINGS);
             } catch (Exception e) {
-                LOG.error("Couldn't delete previous upload resource: " + e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-1933ff4cb11655965243b35633c8d341", e);
             }
         }
         m_uploadResourcesByField.put(fieldName, upload);
