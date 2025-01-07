@@ -146,7 +146,7 @@ public class CmsMacroSearchFieldMapping implements I_CmsSearchFieldMapping {
                 CmsMacroResolver resolver = new CmsGalleryNameMacroResolver(cms, content, m_locale);
                 return resolver.resolveMacros(m_param);
             } catch (CmsException e) {
-                LOG.error("Failed to resolve search field mapping value. Returning null.", e);
+                LOG.error("Failed to resolve search field mapping value. Returning null.", "Unexpected error: mobb-9977af83a5a591484ab3f999c0a7f825");
             }
         }
         return null;
