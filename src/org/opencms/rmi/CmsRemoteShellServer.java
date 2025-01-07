@@ -114,7 +114,7 @@ public class CmsRemoteShellServer {
             m_registry.bind(CmsRemoteShellConstants.PROVIDER, providerStub);
             m_initialized = true;
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-b8debb6ef351ff677392af84e9abef81", e);
         }
     }
 
