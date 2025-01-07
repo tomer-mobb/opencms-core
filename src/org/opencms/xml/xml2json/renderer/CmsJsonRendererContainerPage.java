@@ -286,7 +286,7 @@ public class CmsJsonRendererContainerPage {
                     elementBean.initResource(m_cms);
                 } catch (CmsException e) {
                     // Skip elements whose resources can't be read
-                    LOG.warn(e.getLocalizedMessage(), e);
+                    LOG.warn("Unexpected error: mobb-364c4b1a738870c756db1900c1d09cbb", e);
                     continue;
                 }
                 ElementNode elemNode = new ElementNode(elementBean, containerNode);
