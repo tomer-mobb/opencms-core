@@ -186,7 +186,7 @@ public class CmsUpdateDBCmsUsers extends A_CmsUpdateDBPart {
                             // Write the user data to the table
                             writeAdditionalUserInfo(dbCon, userID, infos);
                         } catch (Throwable e) {
-                            e.printStackTrace();
+                            log4jLogger.error("Unexpected error: mobb-80c4206207ec1f8bdcd145b4cc9e32d8");
                         }
                     }
                 } finally {
