@@ -52,6 +52,8 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 import org.apache.commons.logging.Log;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Helper class to call database setup scripts.<p>
@@ -60,6 +62,7 @@ import org.apache.commons.logging.Log;
  */
 public class CmsSetupDb extends Object {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsSetupDb.class);
     /** The folder where to read the setup data from. */
     public static final String SETUP_DATA_FOLDER = "WEB-INF/setupdata/";
 
@@ -440,7 +443,7 @@ public class CmsSetupDb extends Object {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log4jLogger.error("Unexpected error: mobb-6015f8dc11c8748015f5ce5b57a7fbdf");
             result = false;
         } finally {
             try {
