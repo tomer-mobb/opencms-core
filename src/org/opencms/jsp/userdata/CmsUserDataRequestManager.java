@@ -326,7 +326,7 @@ public class CmsUserDataRequestManager {
                 cms.getRequestContext().getLocale());
             return Optional.of(result);
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-786529e2a06a46cfcbe8baf314b5d1df", e);
             return Optional.empty();
         }
     }
