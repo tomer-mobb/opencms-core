@@ -98,7 +98,7 @@ public class CmsJspTagEnableListAdd extends SimpleTagSupport {
                     cms.readResource(m_uploadFolder, CmsResourceFilter.IGNORE_EXPIRATION);
                     bean.as().setUploadFolder(m_uploadFolder);
                 } catch (CmsException e) {
-                    LOG.warn(e.getLocalizedMessage(), e);
+                    LOG.warn("Unexpected error: mobb-d39779dbe9cfe49922c9e51be226a530", e);
                 }
             }
             String jsonData = AutoBeanCodex.encode(bean).getPayload();
