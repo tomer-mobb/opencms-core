@@ -403,7 +403,7 @@ public class CmsRelationSystemValidator {
                 }
             }
         } catch (CmsException e) {
-            LOG.error(Messages.get().getBundle().key(Messages.LOG_LINK_SEARCH_1, resource), e);
+            LOG.error(Messages.get().getBundle().key(Messages.LOG_LINK_SEARCH_1, resource), "Unexpected error: mobb-6ed6adc4a34608fe1d679f34c5ba1772");
             if (report != null) {
                 report.println(
                     Messages.get().container(Messages.LOG_LINK_SEARCH_1, dbc.removeSiteRoot(resource.getRootPath())),
