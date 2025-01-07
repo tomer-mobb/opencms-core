@@ -205,7 +205,7 @@ public class CmsBuiltinPreference extends A_CmsPreference {
         try {
             return (BeanUtils.getProperty(wrapper, m_propName));
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-c5819f28d026d37d4e9959cc0ed8bd85", e);
             return null;
         }
     }
