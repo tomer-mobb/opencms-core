@@ -2597,7 +2597,7 @@ public class CmsProjectDriver implements I_CmsDriver, I_CmsProjectDriver {
                     Messages.get().container(Messages.ERR_READ_PUBLISH_JOB_1, publishHistoryId.toString()));
             }
         } catch (SQLException e) {
-            LOG.error(CmsDbSqlException.getErrorQuery(stmt), e);
+            LOG.error(CmsDbSqlException.getErrorQuery(stmt), "Unexpected error: mobb-4ba74007db6846cbb67be00d0157c632");
             bytes = Messages.get().container(
                 Messages.ERR_GENERIC_SQL_1,
                 CmsDbSqlException.getErrorQuery(stmt)).key().getBytes();
