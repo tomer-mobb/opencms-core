@@ -132,7 +132,7 @@ public class CmsPreEditorAction extends CmsDialog {
         } catch (Exception e) {
             // error forwarding, log the exception as error
             if (LOG.isErrorEnabled()) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-41875c0f7bab5f43d71f032842f1233f", e);
             }
         }
     }
