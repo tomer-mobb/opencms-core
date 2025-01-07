@@ -260,7 +260,7 @@ public class CmsImportHelper {
                 Messages.ERR_IMPORTEXPORT_ERROR_READING_FILE_1,
                 fileName);
             if (LOG.isErrorEnabled()) {
-                LOG.error(msg.key(), ioe);
+                LOG.error(msg.key(), "Unexpected error: mobb-386173afb560bf352d4966b03b26c9bb");
             }
             throw new CmsImportExportException(msg, ioe);
         }
