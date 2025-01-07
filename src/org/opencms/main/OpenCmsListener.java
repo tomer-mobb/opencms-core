@@ -121,7 +121,7 @@ public class OpenCmsListener implements ServletContextListener, HttpSessionListe
             OpenCmsCore.getInstance().getSessionManager().sessionCreated(event);
         } catch (CmsInitException e) {
             if (e.isNewError()) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-95cae209735548576e9f810e886a7193", e);
             }
         } catch (Throwable t) {
             // make sure all other errors are displayed in the OpenCms log
