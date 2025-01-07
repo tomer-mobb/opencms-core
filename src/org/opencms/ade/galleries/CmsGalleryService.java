@@ -968,7 +968,7 @@ public class CmsGalleryService extends CmsGwtService implements I_CmsGalleryServ
             service.setCms(getCmsObject());
             data.setCategories(service.getCategoriesForSitePath(data.getReferenceSitePath()));
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-9d4c74616a21a2a3d0fd40a2a8375ed4", e);
         }
         return data;
     }
