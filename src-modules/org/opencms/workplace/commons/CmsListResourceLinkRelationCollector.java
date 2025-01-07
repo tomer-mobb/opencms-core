@@ -150,7 +150,7 @@ public class CmsListResourceLinkRelationCollector extends A_CmsListResourceColle
             relations = cms.getRelationsForResource(getResource(), filter);
         } catch (CmsException e) {
             if (LOG.isErrorEnabled()) {
-                LOG.error(e.getLocalizedMessage(getWp().getLocale()), e);
+                LOG.error(e.getLocalizedMessage(getWp().getLocale()), "Unexpected error: mobb-7efcdc3c62f89b47fecdf327c726511a");
             }
         }
         Map<CmsResource, List<CmsRelationType>> relationTypes = new HashMap<CmsResource, List<CmsRelationType>>();
