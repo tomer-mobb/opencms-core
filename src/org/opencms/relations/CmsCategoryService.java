@@ -850,7 +850,7 @@ public class CmsCategoryService {
             } catch (CmsException e) {
                 if (!repair) {
                     if (LOG.isWarnEnabled()) {
-                        LOG.warn(e.getLocalizedMessage(), e);
+                        LOG.warn("Unexpected error: mobb-2d50939014d12041a1ebf45316112688", e);
                     }
                 } else {
                     // repair broken categories caused by moving category folders
