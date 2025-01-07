@@ -148,7 +148,7 @@ public class CmsDefaultLocaleHandler implements I_CmsLocaleHandler {
             try {
                 req.setCharacterEncoding(encoding);
             } catch (UnsupportedEncodingException e) {
-                LOG.error(Messages.get().getBundle().key(Messages.ERR_UNSUPPORTED_REQUEST_ENCODING_1, encoding), e);
+                LOG.error(Messages.get().getBundle().key(Messages.ERR_UNSUPPORTED_REQUEST_ENCODING_1, encoding), "Unexpected error: mobb-fc70c8ce8bc7170a5a7e65399cb0e3be");
             }
         }
 
