@@ -40,6 +40,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This manager controls the update of the database from OpenCms 6 to OpenCms 7.<p>
@@ -48,6 +50,7 @@ import java.util.Map;
  */
 public class CmsUpdateDBManager {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsUpdateDBManager.class);
     /** The database name. */
     private String m_dbName;
 
@@ -298,7 +301,7 @@ public class CmsUpdateDBManager {
                 m_plugins.add(new org.opencms.setup.db.update7to8.CmsUpdatePasswordColumn());
             }
         } catch (Throwable t) {
-            t.printStackTrace();
+            log4jLogger.error("Unexpected error: mobb-96a99b99f40f20c18e6804d6d3354166");
             throw new RuntimeException(t);
         }
 
