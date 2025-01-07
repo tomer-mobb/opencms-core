@@ -129,7 +129,7 @@ implements I_CmsResourceInit, I_CmsConfigurationParameterHandler, I_CmsNeedsAdmi
                 CmsStringUtil.joinPaths(baseUri.getPath(), PREFIX, path)).setParameters(params).build().toASCIIString();
             return result;
         } catch (URISyntaxException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-2f733c197aeb3d097529928f9da23d77", e);
             return null;
         }
     }
