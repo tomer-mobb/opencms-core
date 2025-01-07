@@ -44,6 +44,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This class makes an update of the CMS_USERS table splitting it up into CMS_USERS and CMS_USERDATA.<p>
@@ -53,6 +55,7 @@ import java.util.Map;
  */
 public class CmsUpdateDBCmsUsers extends A_CmsUpdateDBPart {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsUpdateDBCmsUsers.class);
     /** Constant for the query to create the user data table.<p> */
     protected static final String QUERY_CREATE_TABLE_USERDATA = "Q_CREATE_TABLE_USERDATA";
 
@@ -202,7 +205,7 @@ public class CmsUpdateDBCmsUsers extends A_CmsUpdateDBPart {
                 System.out.println("table " + CHECK_CMS_USERDATA + " already exists");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log4jLogger.error("Unexpected error: mobb-317a6aaf6af826193ac3f88d085b0a7b");
         }
     }
 
