@@ -309,7 +309,7 @@ public class CmsBrokenLinkRenderer {
                     return referencingPage;
                 }
             } catch (CmsException e) {
-                LOG.info(e.getLocalizedMessage(), e);
+                LOG.info("Unexpected error: mobb-a2512bcbbf4b1e4328b3bfb592dbbd8e", e);
             }
         }
         return null;
