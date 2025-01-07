@@ -38,6 +38,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This class drops the CMS_BACKUP tables that are no longer used after all the transfers are finished.<p>
@@ -56,6 +58,7 @@ import java.util.Map;
  */
 public class CmsUpdateDBDropBackupTables extends A_CmsUpdateDBPart {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsUpdateDBDropBackupTables.class);
     /** Array of the BACKUP tables that are to be dropped.<p> */
     protected static final String[] BACKUP_TABLES = {
         "CMS_BACKUP_PROJECTRESOURCES",
@@ -104,7 +107,7 @@ public class CmsUpdateDBDropBackupTables extends A_CmsUpdateDBPart {
             try {
                 dbCon.updateSqlStatement(dropQuery, replacer, null);
             } catch (SQLException e) {
-                e.printStackTrace();
+                log4jLogger.error("Unexpected error: mobb-8b39b46b0441b36cda11d5dcf9fbe6cb");
             }
         }
     }
