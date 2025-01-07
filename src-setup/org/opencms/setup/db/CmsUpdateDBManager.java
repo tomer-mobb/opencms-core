@@ -313,7 +313,7 @@ public class CmsUpdateDBManager {
             try {
                 updateDatabase(dbPool);
             } catch (Throwable t) {
-                t.printStackTrace();
+                log4jLogger.error("Unexpected error: mobb-eeaf0865c05d81511dd998f8b0e2124b");
             }
 
             System.out.println("... DB Update finished for " + dbPool + ".");
