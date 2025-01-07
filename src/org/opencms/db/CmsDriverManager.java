@@ -6454,7 +6454,7 @@ public final class CmsDriverManager implements I_CmsEventListener {
 
             CmsMessageContainer message = Messages.get().container(Messages.ERR_INIT_CONN_POOL_1, poolName);
             if (LOG.isErrorEnabled()) {
-                LOG.error(message.key(), e);
+                LOG.error(message.key(), "Unexpected error: mobb-bfca720e909174792a8cfb30c75bd3b6");
             }
             throw new CmsInitException(message, e);
         }
