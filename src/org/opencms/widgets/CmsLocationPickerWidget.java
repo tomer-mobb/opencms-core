@@ -156,7 +156,7 @@ public class CmsLocationPickerWidget extends A_CmsWidget implements I_CmsADEWidg
             config = conf.toString();
         } catch (JSONException e) {
             config = DEFAULT_CONFIG;
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-803af57ff2dc93123e17150a37e92d38", e);
         }
 
         return config;
