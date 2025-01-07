@@ -45,12 +45,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Client application used to connect locally to the CmsShell server.<p>
  */
 public class CmsRemoteShellClient {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsRemoteShellClient.class);
     /** Command parameter for passing an additional shell commands class name. */
     public static final String PARAM_ADDITIONAL = "additional";
 
@@ -280,7 +283,7 @@ public class CmsRemoteShellClient {
         try {
             m_remoteShell.end();
         } catch (Exception e) {
-            e.printStackTrace();
+            log4jLogger.error("Unexpected error: mobb-cb34b508f25feecd72908a9ceceeb1b2");
         }
         System.exit(errorCode);
     }
