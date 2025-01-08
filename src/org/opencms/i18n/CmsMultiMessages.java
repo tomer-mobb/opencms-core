@@ -281,7 +281,7 @@ public class CmsMultiMessages extends CmsMessages {
         } else {
             // result was found in cache
             if (LOG.isDebugEnabled()) {
-                LOG.debug(Messages.get().getBundle().key(Messages.LOG_MESSAGE_KEY_FOUND_CACHED_2, keyName, result));
+                LOG.debug("[Redacted]");
             }
             return result;
         }
