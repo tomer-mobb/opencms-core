@@ -213,7 +213,7 @@ public class CmsRepositoryManager {
             try {
                 additionalInfos.put(CmsJlanUsers.JLAN_HASH, CmsJlanUsers.hashPassword(password));
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-8af659336f6791bdb3a6ca9a4827efa7", e);
             }
         }
         return additionalInfos;

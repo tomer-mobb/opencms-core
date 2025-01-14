@@ -141,7 +141,7 @@ public class CmsBrokenLinkRenderer {
                 addPageInfo(brokenLinkBean, title, pagePath);
             }
         } catch (CmsException e) {
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn("Unexpected error: mobb-b720894600150e00a93e59b60b239f83", e);
         }
         return result;
     }
@@ -309,7 +309,7 @@ public class CmsBrokenLinkRenderer {
                     return referencingPage;
                 }
             } catch (CmsException e) {
-                LOG.info(e.getLocalizedMessage(), e);
+                LOG.info("Unexpected error: mobb-a2512bcbbf4b1e4328b3bfb592dbbd8e", e);
             }
         }
         return null;

@@ -157,7 +157,7 @@ public class CmsGallerySearchResult implements Comparable<CmsGallerySearchResult
         try {
             m_resourceType = OpenCms.getResourceManager().getResourceType(res.getTypeId()).getTypeName();
         } catch (CmsLoaderException e) {
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn("Unexpected error: mobb-bb0b73773df8d43599097af8d2437c82", e);
         }
         m_state = res.getState().getState();
         m_structureId = res.getStructureId().toString();
@@ -586,7 +586,7 @@ public class CmsGallerySearchResult implements Comparable<CmsGallerySearchResult
             return res;
         } catch (CloneNotSupportedException e) {
             // shouldn't happen
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-73b00a3f17d2fa6a26957abcc643b653", e);
             return null;
         }
     }
@@ -630,7 +630,7 @@ public class CmsGallerySearchResult implements Comparable<CmsGallerySearchResult
                 }
             }
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-81b880d84a9cd10e7d03cadac442c08f", e);
             return;
         }
     }

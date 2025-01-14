@@ -342,7 +342,7 @@ public class CmsResourceTypeXmlContent extends A_CmsResourceTypeLinkParseable {
             return handler.getEditHandler();
 
         } catch (CmsXmlException e) {
-            LOG.error(e.getMessage(), e);
+            LOG.error("Unexpected error: mobb-a0032c63cf603d3aa946d149c9cbb510", e);
         }
         return null;
     }

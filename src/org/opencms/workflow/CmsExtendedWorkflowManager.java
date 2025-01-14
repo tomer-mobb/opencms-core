@@ -135,7 +135,7 @@ public class CmsExtendedWorkflowManager extends CmsDefaultWorkflowManager {
             }
         } catch (CmsException e) {
             LOG.error("workflow action failed");
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-6a81c020486e901576e38559540de065");
             throw e;
         }
     }
@@ -698,7 +698,7 @@ public class CmsExtendedWorkflowManager extends CmsDefaultWorkflowManager {
                 linkHref);
             notification.send();
         } catch (Throwable e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-a99540b69cedf5b984bf2e25db26f51f");
         }
     }
 }

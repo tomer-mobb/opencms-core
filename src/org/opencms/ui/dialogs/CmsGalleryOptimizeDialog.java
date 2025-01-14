@@ -2245,7 +2245,7 @@ public class CmsGalleryOptimizeDialog extends CmsBasicDialog {
                     updated.add(dataItem);
                 } catch (CmsException e) {
                     errorMessageList.append("<div>" + e.getLocalizedMessage() + "</div>");
-                    LOG.warn(e.getLocalizedMessage(), e);
+                    LOG.warn("Unexpected error: mobb-ffc3637d9370059f9838080b606f5031", e);
                 }
             }
             if (dataItem.isRenamed()) {
@@ -2258,7 +2258,7 @@ public class CmsGalleryOptimizeDialog extends CmsBasicDialog {
                     }
                 } catch (CmsException e) {
                     errorMessageList.append("<div>" + e.getLocalizedMessage() + "</div>");
-                    LOG.warn(e.getLocalizedMessage(), e);
+                    LOG.warn("Unexpected error: mobb-2305137fa8832cdac86cdaebc30cf273", e);
                 }
             }
         }
@@ -2266,7 +2266,7 @@ public class CmsGalleryOptimizeDialog extends CmsBasicDialog {
             handleDataListUpdate(updated);
         } catch (CmsException e) {
             errorMessageList.append("<div>" + e.getLocalizedMessage() + "</div>");
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn("Unexpected error: mobb-8d701d36f40228ff085f73c8480d0d8b", e);
         }
     }
 

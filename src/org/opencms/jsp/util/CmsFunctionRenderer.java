@@ -280,7 +280,7 @@ public class CmsFunctionRenderer {
         try {
             widthNum = Integer.parseInt(width);
         } catch (NumberFormatException e) {
-            LOG.debug(e.getLocalizedMessage(), e);
+            LOG.debug("Unexpected error: mobb-94f6c71d1f97a7cd85ee118d9e4420d7", e);
         }
         return functionBean.getFormatForContainer(m_cms, type, widthNum);
     }

@@ -1209,7 +1209,7 @@ I_CmsCachableApp, I_CmsResultFacetsManager {
 
             } catch (Exception e) {
                 CmsErrorDialog.showErrorDialog(e);
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-1fe2a531fa3f4279c02e93a9f69b9f6e", e);
             }
         }
         if (showOverview) {
@@ -1696,7 +1696,7 @@ I_CmsCachableApp, I_CmsResultFacetsManager {
         } catch (CmsSearchException e) {
             CmsErrorDialog.showErrorDialog(e);
 
-            LOG.error("Error executing search.", e);
+            LOG.error("Error executing search.", "Unexpected error: mobb-1d38bfec590b5cfd92f9f0beee53ebe4");
         }
     }
 

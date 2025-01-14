@@ -206,7 +206,7 @@ public class CmsSolrIndexWriter implements I_CmsSolrIndexWriter {
                 try {
                     m_server.deleteByQuery(m_index.getCoreName(), "path:\"" + rootPath + "\"", m_commitMs);
                 } catch (Exception e1) {
-                    LOG.error(e1.getLocalizedMessage(), e1);
+                    LOG.error(e1.getLocalizedMessage(), "Unexpected error: mobb-b76a5f424f97658d4990821d4d6b12d3");
                 }
                 try {
                     LOG.info(

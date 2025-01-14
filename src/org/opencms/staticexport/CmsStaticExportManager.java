@@ -3040,14 +3040,14 @@ public class CmsStaticExportManager implements I_CmsEventListener {
                         }
                     } catch (CmsException e) {
                         // should never happen, folder will not be added
-                        LOG.error(e.getLocalizedMessage(), e);
+                        LOG.error("Unexpected error: mobb-8945d4e432a91da69f319ec944f28c24", e);
                     }
                 }
                 return Collections.unmodifiableMap(exportnameResources);
             }
         } catch (CmsException e) {
             // should never happen, no resources will be added at all
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-2b7ada54bfadbbbfb45e0de926557d83", e);
             return Collections.emptyMap();
         }
     }

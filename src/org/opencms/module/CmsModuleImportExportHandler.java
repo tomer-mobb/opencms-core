@@ -436,7 +436,7 @@ public class CmsModuleImportExportHandler implements I_CmsImportExportHandler {
                 exportCms = OpenCms.initCmsObject(exportCms);
                 exportCms.getRequestContext().setSiteRoot(importSite);
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-5365d6b1a168a298322ed9f743ed8874", e);
             }
         }
         new CmsExport(exportCms, report).exportData(params);

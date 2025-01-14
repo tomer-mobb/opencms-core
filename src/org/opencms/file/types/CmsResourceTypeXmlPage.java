@@ -155,7 +155,7 @@ public class CmsResourceTypeXmlPage extends A_CmsResourceTypeLinkParseable {
                     cms.readResource(CmsResource.getParentFolder(resourcename)));
                 content = DEFAULT_BODY.getBytes(encoding);
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-fd96bb635f82d2e01ea18d65be50f58f");
             }
         }
         return super.createResource(cms, securityManager, resourcename, content, properties);
