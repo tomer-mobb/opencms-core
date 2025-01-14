@@ -72,6 +72,7 @@ import com.drew.metadata.Directory;
 import com.drew.metadata.Metadata;
 import com.drew.metadata.exif.ExifDirectoryBase;
 import com.drew.metadata.exif.ExifIFD0Directory;
+import org.xml.sax.SAXException;
 
 /**
  * Resource type descriptor for the type "image".<p>
@@ -751,6 +752,14 @@ public class CmsResourceTypeImage extends A_CmsResourceType {
             double w = -1, h = -1;
             SAXReader reader = new SAXReader();
             reader.setEntityResolver(new CmsXmlEntityResolver(null));
+            try {
+                reader.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+                reader.setFeature("http://xml.org/sax/features/external-general-entities", false);
+                reader.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+            }
+            catch(SAXException e) {
+                throw new RuntimeException(e);
+            }
             Document doc = reader.read(new ByteArrayInputStream(content));
             Element node = (Element)(doc.selectSingleNode("/svg"));
             if (node != null) {
