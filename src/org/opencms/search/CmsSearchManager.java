@@ -1056,7 +1056,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
                         user = m_adminCms.readUser(userId);
                     } catch (Throwable t) {
                         // should not normally happen
-                        LOG.debug(t.getMessage(), t);
+                        LOG.debug("Unexpected error: mobb-79514ec6a12cc7f12d1a55321b573179", t);
                     }
                 }
                 try {
@@ -2385,7 +2385,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
             m_highlighter = (I_CmsTermHighlighter)Class.forName(highlighter).newInstance();
         } catch (Exception e) {
             m_highlighter = null;
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-f4de76beb62f0b48cc376f53dc426e64");
         }
     }
 

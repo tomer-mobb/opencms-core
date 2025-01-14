@@ -310,7 +310,7 @@ public class CmsUgcSession implements I_CmsSessionDestroyHandler {
             m_editResource = m_cms.createResource(getNewContentName(), type);
             return m_editResource;
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-71c9abd07240c086867c0dc82cf37be2", e);
             throw new CmsUgcException(e, CmsUgcConstants.ErrorCode.errMisc, e.getLocalizedMessage());
         }
     }
@@ -848,7 +848,7 @@ public class CmsUgcSession implements I_CmsSessionDestroyHandler {
             try {
                 m_cms.deleteResource(m_cms.getSitePath(prevUploadResource), CmsResource.DELETE_PRESERVE_SIBLINGS);
             } catch (Exception e) {
-                LOG.error("Couldn't delete previous upload resource: " + e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-1933ff4cb11655965243b35633c8d341", e);
             }
         }
         m_uploadResourcesByField.put(fieldName, upload);

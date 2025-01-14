@@ -1048,7 +1048,7 @@ public class CmsAccountsApp extends A_CmsWorkplaceApp implements I_CmsPrincipalS
             try {
                 return m_cms.readGroup(stateBean.getGroupID()).getSimpleName();
             } catch (CmsException e) {
-                LOG.error("Unable to read group", e);
+                LOG.error("Unable to read group", "Unexpected error: mobb-db8df9efe143392bf506be8bc9a776b2");
             }
         }
         return "";

@@ -756,7 +756,7 @@ public class CmsContainerPageCopier {
             m_cms.unlockResource(resource);
         } catch (CmsException e) {
             // usually not a problem
-            LOG.debug("failed to unlock " + resource.getRootPath(), e);
+            LOG.debug("failed to unlock " + resource.getRootPath(), "Unexpected error: mobb-cc71a7e38dfdecedb001092d3deb8ee1");
         }
 
     }

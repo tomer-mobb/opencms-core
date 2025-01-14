@@ -566,7 +566,7 @@ public class CmsSessionsTable extends Table {
                 try {
                     table.ini();
                 } catch (CmsException e) {
-                    LOG.error("Error on reading session information", e);
+                    LOG.error("Error on reading session information", "Unexpected error: mobb-752d48acdac8f7d0af1bde3dca7af23c");
                 }
 
             }

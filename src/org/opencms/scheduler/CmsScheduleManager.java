@@ -442,7 +442,7 @@ public class CmsScheduleManager implements Job {
                 }
             } catch (Exception e) {
                 if (LOG.isDebugEnabled()) {
-                    LOG.debug(e.getMessage(), e);
+                    LOG.debug("Unexpected error: mobb-572f218fbe918d12b46c4af3d739107b", e);
                 }
                 if (idCreated) {
                     jobInfo.setId(null);

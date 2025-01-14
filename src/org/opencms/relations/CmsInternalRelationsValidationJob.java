@@ -90,7 +90,7 @@ public class CmsInternalRelationsValidationJob implements I_CmsScheduledJob {
             OpenCms.getPublishManager().validateRelations(cms, null, report);
         } catch (Exception e) {
             if (report != null) {
-                report.println(e);
+                report.println("Unexpected error: mobb-10840ebe3fdc61db27cc890061e62259");
             } else {
                 msg = CmsException.getStackTraceAsString(e);
             }

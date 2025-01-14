@@ -40,6 +40,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Oracle implementation of the generic update class for the Users.<p>
@@ -48,6 +50,7 @@ import java.util.Map;
  */
 public class CmsUpdateDBCmsUsers extends org.opencms.setup.db.update6to7.CmsUpdateDBCmsUsers {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsUpdateDBCmsUsers.class);
     /** Constant for the query to insert the new user data into the new table CMS_USERDATA.<p> */
     private static final String QUERY_ORACLE_USERDATA_UPDATE = "Q_ORACLE_USERDATA_UPDATE";
 
@@ -95,7 +98,7 @@ public class CmsUpdateDBCmsUsers extends org.opencms.setup.db.update6to7.CmsUpda
                 // Create the index
                 dbCon.updateSqlStatement(stmt, replacer, null);
             } catch (SQLException e) {
-                e.printStackTrace();
+                log4jLogger.error("Unexpected error: mobb-5489b627b42382bbaf434f929f29ff1a");
             }
         }
     }

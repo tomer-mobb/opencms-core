@@ -1177,7 +1177,7 @@ public class CmsProjectDriver implements I_CmsDriver, I_CmsProjectDriver {
                     onlineProject,
                     new CmsAliasFilter(null, null, currentFolder.getStructureId()));
             } catch (CmsDataAccessException e) {
-                LOG.error("Could not delete aliases: " + e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-6b59fbbf91181ae701458ae8dff26e5f", e);
             }
 
             report.println(
@@ -3281,7 +3281,7 @@ public class CmsProjectDriver implements I_CmsDriver, I_CmsProjectDriver {
             if (LOG.isErrorEnabled()) {
                 LOG.error(
                     Messages.get().getBundle().key(Messages.LOG_WRITING_PUBLISHING_HISTORY_1, resource.getRootPath()),
-                    e);
+                    "Unexpected error: mobb-6fc78ac63a689942d5a8c32be60268b8");
             }
             throw e;
         }
@@ -3640,7 +3640,7 @@ public class CmsProjectDriver implements I_CmsDriver, I_CmsProjectDriver {
             if (LOG.isErrorEnabled()) {
                 LOG.error(
                     Messages.get().getBundle().key(Messages.LOG_DELETING_PROPERTIES_1, offlineResource.getRootPath()),
-                    e);
+                    "Unexpected error: mobb-19823d42a45a711c3bad136deede587d");
             }
             throw e;
         }
@@ -3813,7 +3813,7 @@ public class CmsProjectDriver implements I_CmsDriver, I_CmsProjectDriver {
             if (LOG.isErrorEnabled()) {
                 LOG.error(
                     Messages.get().getBundle().key(Messages.LOG_PUBLISHING_RESOURCE_1, offlineResource.getRootPath()),
-                    e);
+                    "Unexpected error: mobb-8d3c33e3dfb2cf54d4a73b48214c9b53");
             }
             throw e;
         }

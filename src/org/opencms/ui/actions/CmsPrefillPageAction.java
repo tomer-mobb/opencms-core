@@ -197,7 +197,7 @@ public class CmsPrefillPageAction extends A_CmsWorkplaceAction implements I_CmsA
                 }
             } catch (InstantiationException | ClassNotFoundException | IllegalAccessException e) {
                 if (LOG.isInfoEnabled()) {
-                    LOG.info(e, e);
+                    LOG.info("Unexpected error: mobb-8b79bff282faefd6f369b002830606cd", e);
                 } else {
                     LOG.error(e);
                 }

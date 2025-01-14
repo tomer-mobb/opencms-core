@@ -1197,7 +1197,7 @@ public class CmsExport {
                 project.getName(),
                 project.getUuid());
             if (LOG.isDebugEnabled()) {
-                LOG.debug(message.key(), exc);
+                LOG.debug(message.key(), "Unexpected error: mobb-d78fc75dfefa17b375120b0f26531217");
             }
 
             throw new CmsImportExportException(message, exc);
@@ -1244,7 +1244,7 @@ public class CmsExport {
             throw e;
         } catch (CmsException e) {
             if (LOG.isDebugEnabled()) {
-                LOG.debug(e.getLocalizedMessage(), e);
+                LOG.debug("Unexpected error: mobb-a3698bb2e06a8d761c2b20278ea082ec", e);
             }
             throw new CmsImportExportException(e.getMessageContainer(), e);
         }

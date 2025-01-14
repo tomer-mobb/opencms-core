@@ -1030,7 +1030,7 @@ public class CmsEditSiteForm extends CmsBasicDialog {
             }
 
         } catch (CmsException e) {
-            LOG.error("Can not initialize CmsObject", e);
+            LOG.error("Can not initialize CmsObject", "Unexpected error: mobb-f00ecbde98627b65621aff162ec0ea68");
         }
         m_ok.setEnabled(true);
         m_infoSiteRoot.setVisible(false);
@@ -1921,7 +1921,7 @@ public class CmsEditSiteForm extends CmsBasicDialog {
                 }
             }
         } catch (CmsException e) {
-            LOG.error("Error on reading OUs", e);
+            LOG.error("Error on reading OUs", "Unexpected error: mobb-88338f8e4d5434b14e9389507ff89dd4");
         }
         return "/";
     }
@@ -2123,7 +2123,7 @@ public class CmsEditSiteForm extends CmsBasicDialog {
                 }
             }
         } catch (CmsException e) {
-            LOG.error("Unable to read template property.", e);
+            LOG.error("Unable to read template property.", "Unexpected error: mobb-a89625b0805201ab7e795d4cd288cc0d");
             m_simpleFieldTemplate.setValue(null);
         }
     }

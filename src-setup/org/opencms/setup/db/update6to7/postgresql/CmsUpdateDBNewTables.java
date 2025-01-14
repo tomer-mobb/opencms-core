@@ -68,7 +68,7 @@ public class CmsUpdateDBNewTables extends org.opencms.setup.db.update6to7.CmsUpd
     @Override
     protected void internalExecute(CmsSetupDb dbCon) throws SQLException {
 
-        System.out.println(new Exception().getStackTrace()[0].toString());
+        System.out.println("Unexpected error: mobb-8e9767da42f533509a4eec8f5407498d");
 
         String indexTablespace = m_poolData.get("indexTablespace");
 

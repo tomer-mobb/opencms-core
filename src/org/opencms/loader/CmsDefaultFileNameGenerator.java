@@ -243,7 +243,7 @@ public class CmsDefaultFileNameGenerator implements I_CmsFileNameGenerator {
             }
 
         } catch (CmsException e) {
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn("Unexpected error: mobb-afcac8342d436bd2c2a3a6e9a5dfb0f6", e);
         }
 
         return getNewFileNameFromList(fileNames, checkPattern, defaultDigits, explorerMode);

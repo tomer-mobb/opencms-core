@@ -611,7 +611,7 @@ public class CmsModuleUpdater {
 
         } catch (Exception e) {
             m_report.println(e);
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-1d97a204155f642d3bc152cf20266e86", e);
 
         }
     }

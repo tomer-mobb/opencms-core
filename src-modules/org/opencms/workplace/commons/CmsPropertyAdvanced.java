@@ -597,7 +597,7 @@ public class CmsPropertyAdvanced extends CmsTabDialog implements I_CmsDialogHand
         } catch (CmsException e) {
             // should usually never happen
             if (LOG.isInfoEnabled()) {
-                LOG.info(e.getLocalizedMessage());
+                LOG.info("Unexpected error: mobb-a7d89bb24f9c41e3115848af22c62e99");
             }
         }
         return URI_PROPERTY_DIALOG;
@@ -860,7 +860,7 @@ public class CmsPropertyAdvanced extends CmsTabDialog implements I_CmsDialogHand
             }
         } catch (CmsException e) {
             // error reading resource, log the error
-            LOG.error(e.getLocalizedMessage());
+            LOG.error("Unexpected error: mobb-2608a4a9e1768c2d95320fb986f1a9fc");
         }
 
         // set the dialog type

@@ -654,7 +654,7 @@ public final class CmsWorkplaceManager implements I_CmsLocaleHandler, I_CmsEvent
                 Messages.get().getBundle().key(
                     Messages.LOG_INVALID_EDITOR_PRE_ACTION_1,
                     preEditorConditionDefinitionClassName),
-                e);
+                "Unexpected error: mobb-44bad02fce5d4b3d042ba199fe83e92f");
         }
     }
 

@@ -156,7 +156,7 @@ public abstract class A_CmsMessageDialog extends CmsWidgetDialog {
             manageableUsers = OpenCms.getRoleManager().getManageableUsers(getCms(), "", true);
         } catch (CmsException e) {
             if (LOG.isErrorEnabled()) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-c616e90e54eef0d5b35d954ee6356881", e);
             }
         }
         List<String> ids = new ArrayList<String>();

@@ -1539,7 +1539,7 @@ public abstract class CmsWorkplace {
             } catch (InvocationTargetException ite) {
                 // can usually be ignored
                 if (LOG.isInfoEnabled()) {
-                    LOG.info(ite.getLocalizedMessage());
+                    LOG.info("Unexpected error: mobb-e8a466a23cd5eb6aaf7bd861d383515d");
                 }
             } catch (IllegalAccessException eae) {
                 // can usually be ignored

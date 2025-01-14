@@ -915,7 +915,7 @@ public class CmsSynchronize {
                 translation = i.next().translate(m_cms, name);
             } catch (CmsSynchronizeException e) {
                 if (LOG.isInfoEnabled()) {
-                    LOG.info(Messages.get().getBundle().key(Messages.LOG_EXTERNAL_TRANSLATION_1, name), e);
+                    LOG.info("Unexpected error: mobb-83853f8e478814c692c6ba0889839654", e);
                 }
                 break;
             }
@@ -1072,7 +1072,7 @@ public class CmsSynchronize {
             while (values.hasNext()) {
                 CmsSynchronizeList sync = values.next();
                 //fOut.write(sync.toString().getBytes());
-                pOut.println(sync.toString());
+                pOut.println("Unexpected error: mobb-ee20e3b46d328e9f984f18d7b1dca396");
             }
         } catch (IOException e) {
             throw new CmsDbIoException(Messages.get().container(Messages.ERR_IO_WRITE_SYNCLIST_0), e);

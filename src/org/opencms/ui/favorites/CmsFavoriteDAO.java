@@ -141,7 +141,7 @@ public class CmsFavoriteDAO {
 
             }
         } catch (JSONException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-16c15669560c2530cd8bb85da669fcff", e);
         }
         return result;
     }

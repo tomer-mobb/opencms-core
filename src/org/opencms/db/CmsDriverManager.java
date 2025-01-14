@@ -4284,7 +4284,7 @@ public final class CmsDriverManager implements I_CmsEventListener {
                                         allGroups.add(readGroup(dbc, childRole.getGroupName()));
                                     } catch (CmsDataAccessException e) {
                                         // should not happen, log error if it does
-                                        LOG.error(e.getLocalizedMessage(), e);
+                                        LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-6dcf7900df5c2808a7cea76d3abdf290");
                                     }
                                 }
                             }
@@ -6454,7 +6454,7 @@ public final class CmsDriverManager implements I_CmsEventListener {
 
             CmsMessageContainer message = Messages.get().container(Messages.ERR_INIT_CONN_POOL_1, poolName);
             if (LOG.isErrorEnabled()) {
-                LOG.error(message.key(), e);
+                LOG.error(message.key(), "Unexpected error: mobb-bfca720e909174792a8cfb30c75bd3b6");
             }
             throw new CmsInitException(message, e);
         }

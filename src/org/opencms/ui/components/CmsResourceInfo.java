@@ -97,7 +97,7 @@ public class CmsResourceInfo extends CustomLayout {
             addComponent(m_topInput, "topInput");
             m_topInput.setVisible(false);
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-294d0f7f822f76ab9d5295a16ef5883c");
         }
     }
 

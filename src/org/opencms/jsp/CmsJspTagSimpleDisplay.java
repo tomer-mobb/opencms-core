@@ -185,7 +185,7 @@ public class CmsJspTagSimpleDisplay extends BodyTagSupport implements I_CmsJspTa
                     request,
                     response);
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-1589f6e36f4bd6a34328134fb3d8e027", e);
             }
         }
         release();

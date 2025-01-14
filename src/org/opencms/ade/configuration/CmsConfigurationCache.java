@@ -353,7 +353,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                                     + candidate.getRootPath()
                                     + ": "
                                     + e.getLocalizedMessage(),
-                                e);
+                                "Unexpected error: mobb-5e5d43fa855e959b5a4318b70da8aeb5");
                         }
 
                     }
@@ -458,7 +458,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                 || CmsFormatterConfigurationCache.TYPE_FLEX_FORMATTER.equals(resType.getTypeName()))
                 && CmsResource.getParentFolder(rootPath).endsWith("/.content/.formatters");
         } catch (Exception e) {
-            LOG.debug(e.getMessage(), e);
+            LOG.debug("Unexpected error: mobb-46b98f766922953f18ffaff01ade3702", e);
         }
         return result;
     }
@@ -524,7 +524,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                     try {
                         views.add(new CmsElementView(m_cms, res));
                     } catch (Exception e) {
-                        LOG.error(e.getMessage(), e);
+                        LOG.error("Unexpected error: mobb-68830d3aef90019e4827c0311087bcf3", e);
                     }
                 }
             } catch (CmsException e) {
@@ -814,7 +814,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                         CmsSitePlugin sitePlugin = CmsSitePlugin.read(m_cms, res);
                         result.put(res.getStructureId(), sitePlugin);
                     } catch (Exception e) {
-                        LOG.error(e.getMessage(), e);
+                        LOG.error("Unexpected error: mobb-95f87724b52d418c5998e967930c33bd", e);
                     }
                 }
             } catch (CmsException e) {

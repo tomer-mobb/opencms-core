@@ -367,7 +367,7 @@ public class CmsSiteManager extends A_CmsWorkplaceApp implements I_CmsCRUDApp<Cm
             OpenCms.getSiteManager().updateGeneralSettings(cms, defaultUri, workplaceServers, sharedFolder);
             OpenCms.writeConfiguration(CmsSitesConfiguration.class);
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-ad7066dfc5823cf78c439fba6b1a2f25", e);
             CmsErrorDialog.showErrorDialog(e);
         }
     }
