@@ -496,7 +496,30 @@ public class CmsSynchronize {
 
         String path = m_destinationPathInRfs + res.substring(0, res.lastIndexOf("/"));
         String fileName = res.substring(res.lastIndexOf("/") + 1);
+        ensurePathIsRelativeToDest(path, fileName);
         return new File(path, fileName);
+    }
+
+    private static void ensurePathIsRelativeToDest(File dest, String path) {
+        File file = new File(dest, path);
+        String destCanonicalPath;
+        String fileCanonicalPath;
+    
+        try {
+            destCanonicalPath = dest.getCanonicalPath();
+            fileCanonicalPath = file.getCanonicalPath();
+        } catch (IOException e) {
+            throw new RuntimeException("Potential directory traversal attempt", e);
+        }
+    
+        if (!fileCanonicalPath.startsWith(destCanonicalPath + File.separator)) {
+            throw new RuntimeException("Potential directory traversal attempt");
+        }
+    }
+
+
+    private static void ensurePathIsRelativeToDest(String dest, String path) {
+        ensurePathIsRelativeToDest(new File(dest), path);
     }
 
     /**
