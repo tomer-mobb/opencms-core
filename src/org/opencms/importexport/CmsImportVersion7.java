@@ -772,7 +772,7 @@ public class CmsImportVersion7 implements I_CmsImport {
                     } catch (CmsException e) {
                         getReport().addWarning(e);
                         if (LOG.isWarnEnabled()) {
-                            LOG.warn(e.getLocalizedMessage());
+                            LOG.warn("Unexpected error: mobb-a43c91f00c9bd81baa7161f6470e99ff");
                         }
                         if (LOG.isDebugEnabled()) {
                             LOG.debug(e.getLocalizedMessage(), e);
@@ -791,7 +791,7 @@ public class CmsImportVersion7 implements I_CmsImport {
                 } catch (CmsException e) {
                     getReport().addWarning(e);
                     if (LOG.isWarnEnabled()) {
-                        LOG.warn(e.getLocalizedMessage());
+                        LOG.warn("Unexpected error: mobb-6c025f31081717687e86abd33e3819e5");
                     }
                     if (LOG.isDebugEnabled()) {
                         LOG.debug(e.getLocalizedMessage(), e);
@@ -1729,7 +1729,7 @@ public class CmsImportVersion7 implements I_CmsImport {
                         LOG.warn(e.getLocalizedMessage());
                     }
                     if (LOG.isDebugEnabled()) {
-                        LOG.debug(e.getLocalizedMessage(), e);
+                        LOG.debug("Unexpected error: mobb-e5c60ce248e1c50af88396a2504c9607", e);
                     }
                 }
             }
