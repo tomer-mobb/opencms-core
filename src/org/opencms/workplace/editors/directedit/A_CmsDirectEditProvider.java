@@ -167,7 +167,7 @@ public abstract class A_CmsDirectEditProvider implements I_CmsDirectEditProvider
                     org.opencms.workplace.editors.Messages.get().getBundle().key(
                         org.opencms.workplace.editors.Messages.LOG_CALC_EDIT_MODE_FAILED_1,
                         resourceName),
-                    e);
+                    "Unexpected error: mobb-ab2016171c4c46dfb0e04cc31a2f2a96");
             }
         }
         // otherwise the resource is not direct editable

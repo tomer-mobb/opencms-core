@@ -288,7 +288,7 @@ public class CmsXmlFileTransformer {
                     }
                 }
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-83047fb20c2443b3b59f0b3a7e03392c", e);
                 m_report.println(e);
             } finally {
                 if (changed) {

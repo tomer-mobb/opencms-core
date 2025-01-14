@@ -237,7 +237,7 @@ public class CmsUserDataFormLayout extends FormLayout {
             }
         } catch (CmsException | CommitException | IllegalAccessException | InvocationTargetException
         | NoSuchMethodException e) {
-            LOG.error("Unable to commit changes to user..", e);
+            LOG.error("Unable to commit changes to user..", "Unexpected error: mobb-6199939b86d0a3cd7dbf75f57b81f1a3");
         }
     }
 

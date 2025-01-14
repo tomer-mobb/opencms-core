@@ -295,7 +295,7 @@ public class CmsResourceTypesTable extends Table {
                     CmsVaadinUtils.getMessageText(Messages.GUI_RESOURCETYPE_MOVE_WINDOW_CAPTION_1, moduleName));
                 A_CmsUI.get().addWindow(window);
             } catch (CmsLoaderException e) {
-                LOG.error("Unable to read resource type by name", e);
+                LOG.error("Unable to read resource type by name", "Unexpected error: mobb-2d5a59731aab13a979f8d36b6235aeda");
             }
         }
 

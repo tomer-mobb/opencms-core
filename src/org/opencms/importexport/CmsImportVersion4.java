@@ -144,7 +144,7 @@ public class CmsImportVersion4 extends A_CmsImport {
                 Messages.ERR_IMPORTEXPORT_ERROR_READING_FILE_1,
                 CmsImportExportManager.EXPORT_MANIFEST);
             if (LOG.isErrorEnabled()) {
-                LOG.error(msg.key(), ioe);
+                LOG.error(msg.key(), "Unexpected error: mobb-1c3482f4438ca6f1df9be13bea61e93a");
             }
             throw new CmsImportExportException(msg, ioe);
         } finally {

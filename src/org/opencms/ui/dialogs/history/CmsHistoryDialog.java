@@ -160,7 +160,7 @@ public class CmsHistoryDialog extends CmsBasicDialog {
                     try {
                         tryCompare();
                     } catch (Exception e) {
-                        LOG.error(e.getLocalizedMessage(), e);
+                        LOG.error("Unexpected error: mobb-a181c5549853a9925cf02a18c6601919", e);
                         m_context.error(e);
                     }
                 }

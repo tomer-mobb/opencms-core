@@ -240,7 +240,7 @@ public class CmsTwoFactorAuthenticationUserPolicy {
             try {
                 return context.getGroupNames().contains(entry.getValue());
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-73496b696786f91cae515191a980a553", e);
                 return false;
             }
         } else if (entry.getType() == CheckType.pattern) {

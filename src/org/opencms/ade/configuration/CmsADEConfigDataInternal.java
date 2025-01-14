@@ -781,7 +781,7 @@ public class CmsADEConfigDataInternal {
                     CmsResource resource = m_cms.readResource(modelPage.getStructureId());
                     result.add(new CmsModelPageConfig(resource, modelPage.isDefault(), modelPage.isDisabled()));
                 } catch (Exception e) {
-                    LOG.warn("can't read model page for base path " + m_basePath + ": " + e.getLocalizedMessage(), e);
+                    LOG.warn("can't read model page for base path " + m_basePath + ": " + e.getLocalizedMessage(), "Unexpected error: mobb-6220b45cf9fc50227d54fdc0301d9687");
                 }
             }
             m_ownModelPageConfig = result;

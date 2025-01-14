@@ -730,7 +730,7 @@ public abstract class A_CmsSearchIndex implements I_CmsSearchIndex {
             } catch (IOException e) {
                 LOG.error(
                     Messages.get().getBundle().key(Messages.LOG_IO_INDEX_WRITER_CLOSE_2, getPath(), getName()),
-                    e);
+                    "Unexpected error: mobb-fd1e5562c7b42864102a1bb496b8122f");
             }
         }
     }

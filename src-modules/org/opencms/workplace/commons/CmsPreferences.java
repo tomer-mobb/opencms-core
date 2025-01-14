@@ -550,7 +550,7 @@ public class CmsPreferences extends CmsTabDialog {
             getSettings().setProject(project.getUuid());
         } catch (Exception e) {
             // should usually never happen
-            LOG.error(e.getLocalizedMessage());
+            LOG.error("Unexpected error: mobb-3cc7553152dbb8be111f41a12499f132");
         }
 
         // now determine if the dialog has to be closed or not

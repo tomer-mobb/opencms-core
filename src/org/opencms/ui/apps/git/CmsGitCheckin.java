@@ -839,7 +839,7 @@ public class CmsGitCheckin {
                     result &= importModule(outputFile);
                     outputFile.delete();
                 } catch (Exception e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-bf3e97b658b979b5a279f9464ee9f5ca");
                     e.printStackTrace(m_logStream);
                     result = false;
                 }
