@@ -39,6 +39,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * PostgreSQL implementation to drop the old indexes from the database.<p>
@@ -47,6 +49,7 @@ import java.util.Map;
  */
 public class CmsUpdateDBDropOldIndexes extends org.opencms.setup.db.update6to7.CmsUpdateDBDropOldIndexes {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsUpdateDBDropOldIndexes.class);
     /** Constant for the sql query to drop a unique index key. */
     private static final String QUERY_DROP_CONSTRAINT = "Q_DROP_CONSTRAINT";
 
@@ -181,7 +184,7 @@ public class CmsUpdateDBDropOldIndexes extends org.opencms.setup.db.update6to7.C
                 String creationQuery = readQuery(createIndex);
                 dbCon.updateSqlStatement(creationQuery, null, null);
             } catch (SQLException e) {
-                e.printStackTrace();
+                log4jLogger.error("Unexpected error: mobb-8d95294292acba361c18d5c1af27de08");
             }
         }
     }

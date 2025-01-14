@@ -2687,7 +2687,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
                     }
                 }
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-80c07b4ad02d594c18213cc6757491d8", e);
             }
         }
         return additionalUpdateResources;
@@ -3185,7 +3185,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
                 try {
                     ((I_CmsSolrIndexWriter)writer).deleteAllDocuments();
                 } catch (IOException e) {
-                    LOG.error(e.getMessage(), e);
+                    LOG.error("Unexpected error: mobb-58784110133e41a3ade1eadfebd58384", e);
                 }
             }
 
