@@ -55,6 +55,7 @@ import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
+import javax.xml.XMLConstants;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -522,6 +523,8 @@ public class CmsConfigurationManager implements I_CmsXmlConfiguration {
         System.setErr(new PrintStream(errBaos));
         try {
             LOG.info("Transforming '" + configPath + "' with transformation '" + transformPath + "'");
+            factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+            factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_STYLESHEET, "");
             Transformer transformer = factory.newTransformer(new StreamSource(new File(transformPath)));
             transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
             transformer.setParameter("file", config.getXmlFileName());

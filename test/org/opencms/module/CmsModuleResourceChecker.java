@@ -41,6 +41,7 @@ import org.apache.commons.collections.Closure;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import org.xml.sax.SAXException;
 
 /**
  * Helper class to list files in modules which are missing from the modules' manifests.<p>
@@ -115,6 +116,14 @@ public class CmsModuleResourceChecker {
         final String basePath = new File(baseFolder).getAbsolutePath();
 
         SAXReader reader = new SAXReader();
+        try {
+            reader.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+            reader.setFeature("http://xml.org/sax/features/external-general-entities", false);
+            reader.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+        }
+        catch(SAXException e) {
+            throw new RuntimeException(e);
+        }
         Document doc = reader.read(new File(manifest));
         List<?> nodes = doc.selectNodes("//export/files/file/source");
         for (Object node : nodes) {
