@@ -45,6 +45,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * PostgreSQL implementation of the generic update class for the Users.<p>
@@ -53,6 +55,7 @@ import java.util.Map;
  */
 public class CmsUpdateDBCmsUsers extends org.opencms.setup.db.update6to7.CmsUpdateDBCmsUsers {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsUpdateDBCmsUsers.class);
     /** Constant for the SQL query properties.<p> */
     private static final String QUERY_PROPERTY_FILE = "cms_users_queries.properties";
 
@@ -110,7 +113,7 @@ public class CmsUpdateDBCmsUsers extends org.opencms.setup.db.update6to7.CmsUpda
                 System.out.println("table " + CHECK_CMS_USERDATA + " already exists");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log4jLogger.error("Unexpected error: mobb-e5215be61a52f4279c1089cddfdfeea4");
         }
         try {
             // Check if the CMS_USERDATA table exists
@@ -149,7 +152,7 @@ public class CmsUpdateDBCmsUsers extends org.opencms.setup.db.update6to7.CmsUpda
                             // Write the user data to the table
                             writeAdditionalUserInfo(dbCon, userID, infos);
                         } catch (Throwable e) {
-                            e.printStackTrace();
+                            log4jLogger.error("Unexpected error: mobb-55288982a315b8dbf222efad8a383290");
                         }
                     }
                 } finally {

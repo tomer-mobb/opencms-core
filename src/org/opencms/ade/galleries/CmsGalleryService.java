@@ -422,7 +422,7 @@ public class CmsGalleryService extends CmsGwtService implements I_CmsGalleryServ
                 }
             }
         } catch (CmsException e1) {
-            LOG.error(e1.getLocalizedMessage(), e1);
+            LOG.error("Unexpected error: mobb-4ddb313b2321dbca9ae2a9b47bb62ec1", e1);
         }
         try {
             vfsPreloadData = vfsloader.preloadData(cms, treeOpenResources, folderSetResources);
@@ -1520,7 +1520,7 @@ public class CmsGalleryService extends CmsGwtService implements I_CmsGalleryServ
             try {
                 result.add(getCmsObject().readResource(id, filter));
             } catch (CmsException e) {
-                LOG.info(e.getLocalizedMessage(), e);
+                LOG.info("Unexpected error: mobb-0f499e2e45d03b174926ac52815e81a9", e);
             }
         }
         return result;

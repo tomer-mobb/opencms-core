@@ -207,7 +207,7 @@ public class CmsAddDialogTypeHelper {
                     view.getId(),
                     getResourceTypes(cms, folderRootPath, null, checkViewableReferenceUri, view, check));
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-6a3bd531f5facde26eaf58a506112ac3");
             }
         }
         m_cachedTypes = result;

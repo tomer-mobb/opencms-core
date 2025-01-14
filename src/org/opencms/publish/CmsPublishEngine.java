@@ -555,7 +555,7 @@ public final class CmsPublishEngine {
             return m_driverManager.readUser(dbc, userId);
         } catch (CmsException e) {
             dbc.rollback();
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-d3f002b2795375caeb9ad0632e17fd05");
         } finally {
             dbc.clear();
         }
@@ -692,7 +692,7 @@ public final class CmsPublishEngine {
             m_publishHistory.add(publishJob);
         } catch (Throwable t) {
             // log failure, most likely a database problem
-            LOG.error(t.getLocalizedMessage(), t);
+            LOG.error(t.getLocalizedMessage(), "Unexpected error: mobb-7076f8c790ff568067bd21f231dc1524");
         }
         if (Thread.currentThread() == m_currentPublishThread) {
             // wipe the dead thread, only if this thread has not been abandoned

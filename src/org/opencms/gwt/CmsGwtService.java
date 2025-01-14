@@ -201,7 +201,7 @@ public class CmsGwtService extends RemoteServiceServlet {
             super.log(message, t);
         }
         // also log to opencms.log
-        LOG.info(message, t);
+        LOG.info("Unexpected error: mobb-b9a3d3c2dcf53a8e6e5cde24563dd05c", t);
     }
 
     /**

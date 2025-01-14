@@ -1066,7 +1066,7 @@ I_CmsContextProvider, CmsFileTable.I_FolderSelectHandler {
                     cms.getRequestContext().setCurrentProject(project);
                     CmsAppWorkplaceUi.get().getWorkplaceSettings().setProject(project.getUuid());
                 } catch (CmsException e) {
-                    LOG.warn("Error reading project from history state", e);
+                    LOG.warn("Error reading project from history state", "Unexpected error: mobb-a1d4a602b40c2f3d7ed5f0103eff438a");
                 }
                 changeSite(siteRoot, path, true);
             } else if ((siteRoot != null)
@@ -1594,7 +1594,7 @@ I_CmsContextProvider, CmsFileTable.I_FolderSelectHandler {
             m_fileTree.markAsDirtyRecursive();
         } catch (CmsException e) {
             CmsErrorDialog.showErrorDialog(e);
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-6e54b3c044f867bbf4f3a4246393548b", e);
         }
     }
 

@@ -365,7 +365,7 @@ public class CmsUIServlet extends VaadinServlet implements SystemMessagesProvide
             }
         } catch (IOException io) {
             // probably connection aborted by client, no need to write to the ERROR channel
-            LOG.warn(io.getLocalizedMessage(), io);
+            LOG.warn("Unexpected error: mobb-7c298e1871f6e65d82520d902519a7f4", io);
             // try so set status and send error in any case
             int status = HttpServletResponse.SC_INTERNAL_SERVER_ERROR;
             response.setStatus(status);

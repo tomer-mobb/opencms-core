@@ -38,10 +38,13 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Map.Entry;
 import java.util.Properties;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /** Access to a single git configuration file. */
 public class CmsGitConfiguration {
 
+    private static Logger log4jLogger = LogManager.getLogger(CmsGitConfiguration.class);
     /** The system module export path. */
     private static final String SYSTEM_MODULE_EXPORTPATH = OpenCms.getSystemInfo().getPackagesRfsPath()
         + CmsSystemInfo.FOLDER_MODULES;
@@ -405,7 +408,7 @@ public class CmsGitConfiguration {
                     }
                     m_isValid = true;
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    log4jLogger.error("Unexpected error: mobb-3c53782b79bf3314f60cced9ba41462b");
                 }
             }
         }

@@ -421,7 +421,7 @@ public class CmsContainerPageCopier {
                             CmsResource valRes = rootCms.readResource(value, CmsResourceFilter.IGNORE_EXPIRATION);
                             customReplacements.put(keyRes.getStructureId(), valRes.getStructureId());
                         } catch (Exception e) {
-                            LOG.error(e.getLocalizedMessage(), e);
+                            LOG.error("Unexpected error: mobb-6c036b337a8c50b12a9bfef413b31766", e);
                         }
                         m_customReplacements = customReplacements;
                     }
@@ -680,7 +680,7 @@ public class CmsContainerPageCopier {
             try {
                 localeGroupService.attachLocaleGroupIndirect(m_originalPage, copiedPage);
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-8f377563975c1d2cf7e2452584eae496", e);
             }
         }
     }
