@@ -1,3 +1,4 @@
+<%@ page import="org.springframework.web.util.HtmlUtils" %>
 <%@ page import="org.opencms.workplace.CmsDialog,
                  org.opencms.file.*,
                  org.opencms.util.CmsUUID,
@@ -30,7 +31,7 @@ default:
     <%= wp.dialogStart() %>
     <%= wp.dialogContentStart("OpenCms content notification") %>
     <form name="main" class="nomargin" action="<%= wp.getDialogUri() %>" method="post">
-    <%= wp.paramsAsHidden() %>
+    <%= HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(wp.paramsAsHidden())) %>
     <input type="hidden" name="<%= wp.PARAM_FRAMENAME %>" value="">
     <input type="hidden" name="<%= wp.PARAM_ACTION %>" value="<%= CmsDialog.ACTION_CANCEL %>">
 <%
