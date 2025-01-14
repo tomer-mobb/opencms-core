@@ -80,6 +80,7 @@ import javax.servlet.jsp.PageContext;
 import org.apache.commons.collections.Buffer;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.logging.Log;
+import org.springframework.web.util.HtmlUtils;
 
 /**
  * Master class for the JSP based workplace which provides default methods and
@@ -1055,7 +1056,7 @@ public abstract class CmsWorkplace {
             String paramName = paramNames.next();
             String paramValue = request.getParameter(paramName);
             retValue.append(
-                paramName + "=" + CmsEncoder.encode(paramValue, getCms().getRequestContext().getEncoding()));
+                HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(String.valueOf(paramName))) + "=" + CmsEncoder.encode(paramValue, getCms().getRequestContext().getEncoding()));
             if (paramNames.hasNext()) {
                 retValue.append("&");
             }
