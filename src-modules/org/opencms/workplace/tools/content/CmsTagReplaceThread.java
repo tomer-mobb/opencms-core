@@ -115,7 +115,7 @@ public class CmsTagReplaceThread extends A_CmsReportThread {
                 I_CmsReport.FORMAT_ERROR);
             getReport().println(e.getMessageContainer(), I_CmsReport.FORMAT_ERROR);
             if (LOG.isErrorEnabled()) {
-                LOG.error(e.getMessageContainer(), e);
+                LOG.error(e.getMessageContainer(), "Unexpected error: mobb-2b7e1ebe61976832894b020cee2b4649");
             }
         } catch (Throwable f) {
             getReport().println(

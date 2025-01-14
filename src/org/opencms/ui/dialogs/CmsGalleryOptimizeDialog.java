@@ -1615,7 +1615,7 @@ public class CmsGalleryOptimizeDialog extends CmsBasicDialog {
                                 m_deletedCurrentResource.remove(dataItem.getResource());
                             }
                     } catch (ValidationException e) {
-                        LOG.warn(e.getLocalizedMessage(), e);
+                        LOG.warn(e.getLocalizedMessage(), "Unexpected error: mobb-5cd6c6f914ae5b57b5bb617680f329a8");
                     }
                 }
             }

@@ -249,7 +249,7 @@ public class CmsContentNotification extends A_CmsNotification {
             buf.append("</a>]");
         } catch (CmsException e) {
             if (LOG.isInfoEnabled()) {
-                LOG.info(e.getLocalizedMessage(), e);
+                LOG.info("Unexpected error: mobb-4f136ebc7e576172ab30d37c20351440", e);
             }
         }
         buf.append("</td>");

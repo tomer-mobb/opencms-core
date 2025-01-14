@@ -278,7 +278,7 @@ public class CmsLogin extends CmsJspLoginBean {
                 result.add(OpenCms.getOrgUnitManager().readOrganizationalUnit(cms, predefOu));
             }
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-e30ef4dce8b05a107fb433a98f0fde02", e);
         }
         return result;
 

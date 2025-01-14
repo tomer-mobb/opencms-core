@@ -134,7 +134,7 @@ public class CmsSitemapTreeController {
          */
         public void error(Throwable error) {
 
-            getTreeControllerLog().error(error.getLocalizedMessage(), error);
+            getTreeControllerLog().error("Unexpected error: mobb-3477706dc7099597ddca649a2023b721", error);
             CmsErrorDialog.showErrorDialog(error);
         }
 

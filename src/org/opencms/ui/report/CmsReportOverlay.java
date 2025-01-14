@@ -75,7 +75,7 @@ public class CmsReportOverlay extends CustomLayout {
             InputStream layoutStream = CmsVaadinUtils.readCustomLayout(getClass(), "reportoverlay.html");
             initTemplateContentsFromInputStream(layoutStream);
         } catch (IOException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-4981450db9a96e728d8905bdf657310b");
         }
 
         m_report = new CmsReportWidget(thread);

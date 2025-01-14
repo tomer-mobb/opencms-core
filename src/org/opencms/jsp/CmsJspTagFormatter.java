@@ -266,7 +266,7 @@ public class CmsJspTagFormatter extends CmsJspScopedVarBodyTagSuport {
             }
 
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-1527681771a8ba4c6e5a016e5f7ded11", e);
             m_controller.setThrowable(e, m_cms.getRequestContext().getUri());
             throw new JspException(e);
         }

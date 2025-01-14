@@ -528,7 +528,7 @@ public class CmsDavResource implements DavResource {
         try {
             getRepositorySession().move(getCmsPath(), other.getCmsPath(), true);
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-8232b513b93c235b978995c60c475839");
             throw new DavException(CmsDavUtil.getStatusForException(e));
         }
 
@@ -569,7 +569,7 @@ public class CmsDavResource implements DavResource {
         try {
             session.updateProperties(getCmsPath(), props);
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-a046a5a06bf803fe7410e73bdd36e24b", e);
             throw new DavException(500);
         }
     }

@@ -232,7 +232,7 @@ public class CmsJspUserDataRequestBean {
                 m_errorHtml = e.getLocalizedMessage();
                 return State.form.toString();
             } catch (EmailException | AddressException e) {
-                LOG.warn(e.getLocalizedMessage(), e);
+                LOG.warn(e.getLocalizedMessage(), "Unexpected error: mobb-06b6e245a446283e414c3eefcae0f147");
                 m_errorHtml = m_config.getText("EmailError");
                 return State.error.toString();
             }

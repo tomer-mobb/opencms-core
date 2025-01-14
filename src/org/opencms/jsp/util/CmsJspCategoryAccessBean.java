@@ -116,7 +116,7 @@ public class CmsJspCategoryAccessBean {
             try {
                 return CmsCategoryService.getInstance().readResourceCategories(cms, resource);
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-f9db7d03da0357a44e69879f03b4d601");
             }
         }
         return new ArrayList<CmsCategory>(0);
