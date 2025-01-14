@@ -253,7 +253,7 @@ public class CmsCommentImages extends CmsDialog {
                 CmsResourceTypeImage.getStaticTypeName()).getTypeId();
         } catch (CmsLoaderException e1) {
             // should really never happen
-            LOG.warn(e1.getLocalizedMessage(), e1);
+            LOG.warn("Unexpected error: mobb-8ac1fc72ad5eadbc639db19a408fe9be", e1);
             imageId = CmsResourceTypeImage.getStaticTypeId();
         }
         CmsResourceFilter filter = CmsResourceFilter.IGNORE_EXPIRATION.addRequireType(imageId);

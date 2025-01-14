@@ -225,7 +225,7 @@ public abstract class A_CmsStaticExportHandler implements I_CmsStaticExportHandl
                 } catch (CmsException e) {
                     // should never happen
                     if (LOG.isErrorEnabled()) {
-                        LOG.error(e.getLocalizedMessage(), e);
+                        LOG.error("Unexpected error: mobb-6600481f56c632c06afbd94555660821", e);
                     }
                 }
                 if ((relations == null) || relations.isEmpty()) {

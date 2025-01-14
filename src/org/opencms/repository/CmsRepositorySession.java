@@ -568,7 +568,7 @@ public class CmsRepositorySession extends A_CmsRepositorySession {
                     CmsProperty prop = new CmsProperty(propName, value, null);
                     propsToWrite.put(propName, prop);
                 } catch (Exception e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-8bebd378fabed8ed26038cc12bf6a70f", e);
                 }
             }
         }

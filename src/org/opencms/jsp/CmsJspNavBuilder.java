@@ -209,7 +209,7 @@ public class CmsJspNavBuilder {
                     return cms.getSitePath(defaultFile);
                 }
             } catch (CmsException e) {
-                LOG.debug(e.getLocalizedMessage(), e);
+                LOG.debug("Unexpected error: mobb-08cf9f004b89803fc15207794643939c", e);
             }
             return folder;
         }
@@ -548,7 +548,7 @@ public class CmsJspNavBuilder {
             resources = m_cms.getResourcesInFolder(folder, resourceFilter);
         } catch (Exception e) {
             // should never happen
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-f7799888486d011a32cb7b55fabf20c9", e);
         }
         if (resources == null) {
             return Collections.<CmsJspNavElement> emptyList();
@@ -806,7 +806,7 @@ public class CmsJspNavBuilder {
             resources = m_cms.getResourcesInFolder(folder, resourceFilter);
         } catch (Exception e) {
             // should never happen
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-10cfb72edefb26b34b5d2b45dfe47e21", e);
             return Collections.<CmsJspNavElement> emptyList();
         }
 

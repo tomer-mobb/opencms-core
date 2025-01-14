@@ -175,7 +175,7 @@ public class CmsNewResource {
         } catch (ClassNotFoundException e) {
 
             if (LOG.isErrorEnabled()) {
-                LOG.error(Messages.get().getBundle().key(Messages.ERR_NEW_RES_HANDLER_CLASS_NOT_FOUND_1, className), e);
+                LOG.error(Messages.get().getBundle().key(Messages.ERR_NEW_RES_HANDLER_CLASS_NOT_FOUND_1, className), "Unexpected error: mobb-5f6df7e58f102e2cd3f9cf4f9d49986e");
             }
             throw new CmsIllegalArgumentException(
                 Messages.get().container(Messages.ERR_NEW_RES_HANDLER_CLASS_NOT_FOUND_1, className));

@@ -2290,7 +2290,7 @@ public class CmsGalleryOptimizeDialog extends CmsBasicDialog {
             try {
                 getCms().unlockResource(m_gallery);
             } catch (CmsException e) {
-                LOG.warn(e.getLocalizedMessage(), e);
+                LOG.warn("Unexpected error: mobb-af2fc53f076f21373130bc5736435594", e);
             }
         }
     }

@@ -111,7 +111,7 @@ public class CmsChangeHandlerConfig {
                 throw new Exception("Incompatible class for editor change handler: " + m_className);
             }
         } catch (Exception e) {
-            LOG.error("Could not create editor change handler: " + e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-b44472e24a14f1630d25af9242d08f4a", e);
             return java.util.Optional.empty();
         }
     }

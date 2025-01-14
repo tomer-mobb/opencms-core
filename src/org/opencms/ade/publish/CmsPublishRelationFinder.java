@@ -438,7 +438,7 @@ public class CmsPublishRelationFinder {
                 resource = m_cms.readResource(structureId, CmsResourceFilter.ALL);
                 m_resources.put(structureId, resource);
             } catch (CmsException e) {
-                LOG.info(e.getLocalizedMessage(), e);
+                LOG.info("Unexpected error: mobb-4e763e369cd37199e22ec996681f0f93", e);
             }
         }
         return resource;

@@ -454,7 +454,7 @@ public class CmsModelPageHelper {
             result.setListInfoBean(infoBean);
             return result;
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-44253ab6fca2cdb63c507ae8ce72dd4a", e);
             return null;
         }
     }

@@ -142,7 +142,7 @@ public class CmsQuickLaunchLocationCache implements Serializable {
                 return null;
             }
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-0db941d5fb39eee6638bbd7fb2075d38", e);
             return null;
         }
 

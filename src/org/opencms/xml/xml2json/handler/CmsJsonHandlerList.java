@@ -86,7 +86,7 @@ public class CmsJsonHandlerList extends CmsJsonHandlerXmlContent {
             LOG.info(e.getLocalizedMessage(), e);
             return new CmsJsonResult(e.getLocalizedMessage(), HttpServletResponse.SC_NOT_FOUND);
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-e9c03d3922d8f6d353939a9172a0a2ac", e);
             return new CmsJsonResult(e.getLocalizedMessage(), HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }

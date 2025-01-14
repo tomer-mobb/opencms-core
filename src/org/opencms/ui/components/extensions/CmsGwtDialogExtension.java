@@ -312,7 +312,7 @@ public class CmsGwtDialogExtension extends AbstractExtension implements I_CmsGwt
                 null/*closelink*/,
                 false/*confirmation*/);
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-91386965f911eaa0f1ba5a3f89fbb782", e);
             return null;
         }
     }

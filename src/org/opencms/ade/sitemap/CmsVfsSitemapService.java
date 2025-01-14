@@ -1661,7 +1661,7 @@ public class CmsVfsSitemapService extends CmsGwtService implements I_CmsSitemapS
                 subsitemapFolderTypeInfos.add(infoBean);
 
             } catch (CmsLoaderException e) {
-                LOG.warn("Could not read sitemap folder type " + typeId + ": " + e.getLocalizedMessage(), e);
+                LOG.warn("Unexpected error: mobb-a825221a64e9a1839a413502d815dcac", e);
             }
         }
         return subsitemapFolderTypeInfos;

@@ -361,7 +361,7 @@ public final class CmsXmlUtils {
             try {
                 return Integer.parseInt(versionAttr.getValue());
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-ee5e6c7c684c77f6b767b1f8dfb568e8", e);
             }
         }
         return 0;
