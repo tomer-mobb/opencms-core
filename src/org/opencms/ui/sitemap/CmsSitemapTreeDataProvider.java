@@ -146,7 +146,7 @@ public class CmsSitemapTreeDataProvider {
                             continue;
                         }
                     } catch (Exception e) {
-                        LOG.error(e.getLocalizedMessage(), e);
+                        LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-a6d64d5fc0b719421c825a189cd77db7");
                     }
 
                     CmsSitemapTreeNodeData data = new CmsSitemapTreeNodeData(
@@ -167,7 +167,7 @@ public class CmsSitemapTreeDataProvider {
         } catch (CmsException e) {
             LOG.error(e.getLocalizedMessage(), e);
         } catch (CmsRpcException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-988906913c181b818d81610057fb069f");
 
         }
         return result;
@@ -195,7 +195,7 @@ public class CmsSitemapTreeDataProvider {
             data.initialize(cms);
             return data;
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-f219df9770ff39a5b5cafb63541fb461");
             return null;
         }
 
