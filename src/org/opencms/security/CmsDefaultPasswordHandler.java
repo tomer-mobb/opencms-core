@@ -208,7 +208,7 @@ implements I_CmsPasswordHandler, I_CmsPasswordSecurityEvaluator, I_CmsPasswordGe
                 Messages.ERR_UNSUPPORTED_PASSWORD_ENCODING_1,
                 inputEncoding);
             if (LOG.isErrorEnabled()) {
-                LOG.error(message.key(), e);
+                LOG.error(message.key(), "Unexpected error: mobb-39c45eeb955ff25edb9f13dcc9b12fa7");
             }
             throw new CmsPasswordEncryptionException(message, e);
         }

@@ -123,7 +123,7 @@ public final class CmsLockUtil {
                 try {
                     m_file = m_cms.readFile(m_res);
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-03dfca62a6f18ae2a3239a9e382ab904", e);
                 }
             }
             return m_file;

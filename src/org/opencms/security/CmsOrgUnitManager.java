@@ -312,7 +312,7 @@ public class CmsOrgUnitManager {
             try {
                 m_securityManager.initializeOrgUnit(cms.getRequestContext(), ou);
             } catch (CmsInitException e) {
-                LOG.error("Error while initializing OU " + ou.getName() + ": " + e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-b57450be61a9a3e98d0141c07fab899a", e);
             }
         }
     }

@@ -123,7 +123,7 @@ public class CmsRebuildReport extends A_CmsListReport {
             try {
                 getToolManager().jspForwardTool(this, "/searchindex", null);
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-cce8da10e5e02ebf7c81a07cdaa7b6c1", e);
             }
 
             throw ex;

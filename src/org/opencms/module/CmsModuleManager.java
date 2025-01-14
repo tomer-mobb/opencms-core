@@ -607,7 +607,7 @@ public class CmsModuleManager {
                 } catch (CmsException e) {
                     // may happen if the resource has already been deleted
                     if (LOG.isDebugEnabled()) {
-                        LOG.debug(e.getMessageContainer(), e);
+                        LOG.debug("Unexpected error: mobb-08fd604a60e80932f9fb09ee76a67163", e);
                     }
                     report.println(e.getMessageContainer(), I_CmsReport.FORMAT_WARNING);
                 }

@@ -166,7 +166,7 @@ public class CmsContainerConfigurationCache implements I_CmsGlobalConfigurationC
                     true);
                 m_state = new CmsContainerConfigurationCacheState(load(resources).values());
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-b4c55ea75031f5d90f880c00b8fc0790", e);
             }
         }
         Runnable updateAction = new Runnable() {

@@ -218,12 +218,12 @@ public class CmsSolrConfiguration {
                 CmsConfigurationException ex = new CmsConfigurationException(
                     Messages.get().container(Messages.LOG_SOLR_ERR_CONFIG_XML_NOT_FOUND_1, getSolrConfigFile()),
                     e);
-                LOG.error(ex.getLocalizedMessage(), ex);
+                LOG.error("Unexpected error: mobb-fa11572b288440c113e2fc3be05bfdd1", ex);
             } catch (Exception e) {
                 CmsConfigurationException ex = new CmsConfigurationException(
                     Messages.get().container(Messages.LOG_SOLR_ERR_CONFIG_XML_NOT_READABLE_1, getSolrConfigFile()),
                     e);
-                LOG.error(ex.getLocalizedMessage(), ex);
+                LOG.error("Unexpected error: mobb-229663b42253704afbf5e45bc0d1a06b", ex);
             }
         }
         return m_solrConfig;

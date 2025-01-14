@@ -725,7 +725,7 @@ public class CmsSearchReplaceThread extends A_CmsReportThread {
                 Messages.get().container(Messages.RPT_SOURCESEARCH_LOCKED_FILE_0, cmsObject.getSitePath(file)),
                 I_CmsReport.FORMAT_ERROR);
             if (LOG.isErrorEnabled()) {
-                LOG.error(e.getMessageContainer(), e);
+                LOG.error("Unexpected error: mobb-7b9a1b595ab084c9d55a872c3cdb0ec4", e);
             }
             success = false;
         }
@@ -754,7 +754,7 @@ public class CmsSearchReplaceThread extends A_CmsReportThread {
                 Messages.get().container(Messages.RPT_SOURCESEARCH_UNLOCK_FILE_0),
                 I_CmsReport.FORMAT_WARNING);
             if (LOG.isErrorEnabled()) {
-                LOG.error(e.getMessageContainer(), e);
+                LOG.error("Unexpected error: mobb-adae1f12900658c56b91eec063e7b3b7", e);
             }
             success = false;
         }

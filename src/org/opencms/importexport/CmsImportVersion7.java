@@ -1726,7 +1726,7 @@ public class CmsImportVersion7 implements I_CmsImport {
                     getReport().addWarning(e);
                     withErrors = true;
                     if (LOG.isWarnEnabled()) {
-                        LOG.warn(e.getLocalizedMessage());
+                        LOG.warn("Unexpected error: mobb-3a5c13c48971eeba0e6f21cd0bfcf897");
                     }
                     if (LOG.isDebugEnabled()) {
                         LOG.debug(e.getLocalizedMessage(), e);
@@ -1922,7 +1922,7 @@ public class CmsImportVersion7 implements I_CmsImport {
             CmsMessageContainer message = Messages.get().container(
                 Messages.ERR_IMPORTEXPORT_ERROR_IMPORTING_RESOURCES_0);
             if (LOG.isDebugEnabled()) {
-                LOG.debug(message.key(), e);
+                LOG.debug(message.key(), "Unexpected error: mobb-06c2a03b105cd3238356716b0d35ca11");
             }
 
             return;

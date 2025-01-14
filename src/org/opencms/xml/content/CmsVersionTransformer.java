@@ -143,7 +143,7 @@ public class CmsVersionTransformer {
 
                 public void warning(SAXParseException e) {
 
-                    LOG.warn(e.getLocalizedMessage(), e);
+                    LOG.warn("Unexpected error: mobb-c4234d7474f97e0902958bcc5ee0c085", e);
 
                 }
             });

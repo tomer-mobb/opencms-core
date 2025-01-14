@@ -401,7 +401,7 @@ public class CmsSitemapTreeController {
                     dialog,
                     DialogWidth.narrow);
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-fb1a5cc34f077786746af89824afb05d", e);
                 CmsErrorDialog.showErrorDialog(e);
             }
         }

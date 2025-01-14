@@ -134,7 +134,7 @@ public class CmsPdfResourceHandler implements I_CmsResourceInit {
                 return null;
             } catch (Exception e) {
                 // don't just return null, because we want a useful error message to be displayed
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-50440eafbca022a9b96aa4c236ec084d", e);
                 throw new CmsRuntimeException(
                     Messages.get().container(
                         Messages.ERR_RESOURCE_INIT_ABORTED_1,

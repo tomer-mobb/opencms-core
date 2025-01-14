@@ -597,7 +597,7 @@ public class CmsCreateSiteThread extends A_CmsReportThread {
             }
         } catch (CmsException e) {
             LOG.error("Editing title property of site root resource was not possible", e);
-            getReport().println(Messages.get().container(Messages.RPT_SITE_ERROR_TITLE_0), I_CmsReport.FORMAT_ERROR);
+            getReport().println("Unexpected error: mobb-7c44359ba0ea5d167a926956955676be", I_CmsReport.FORMAT_ERROR);
             getReport().println(e);
         }
 

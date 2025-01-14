@@ -869,10 +869,7 @@ public class CmsMacroResolver implements I_CmsMacroResolver {
                     } catch (CmsException e) {
                         if (LOG.isWarnEnabled()) {
                             LOG.warn(
-                                Messages.get().getBundle().key(
-                                    Messages.LOG_PROPERTY_READING_FAILED_2,
-                                    macro,
-                                    controller.getCurrentRequest().getElementUri()),
+                                "Unexpected error: mobb-9523553da76451eb5dadc790d9d03ff9",
                                 e);
                         }
                     }
@@ -990,7 +987,7 @@ public class CmsMacroResolver implements I_CmsMacroResolver {
                     val = defaultValue;
                 }
                 if (val == null) {
-                    LOG.warn("Parameter not defined: " + remaining);
+                    LOG.warn("Unexpected error: mobb-4168eabb9315b4db79623e0b46f46fcd");
                 }
                 return val;
 

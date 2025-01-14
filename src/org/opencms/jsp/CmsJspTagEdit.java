@@ -125,7 +125,7 @@ public class CmsJspTagEdit extends CmsJspScopedVarBodyTagSuport {
             } catch (CmsException e) {
                 LOG.warn(
                     "The resource at path" + sitePath + "could not be read. Thus it can not be used as model file.",
-                    e);
+                    "Unexpected error: mobb-d3ef11d3634f53f409f351f96f5351c3");
             }
         }
         CmsADEConfigData adeConfig = OpenCms.getADEManager().lookupConfiguration(cmsObject, rootPath);

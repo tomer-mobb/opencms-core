@@ -411,7 +411,7 @@ public class CmsResourceComparisonDialog extends CmsDialog {
                     // set the content to null, so the content dialog will not be shown
                     originalSource = null;
                     copySource = null;
-                    LOG.error(e.getMessage(), e);
+                    LOG.error("Unexpected error: mobb-68bb24758ea11f9531756c2c2c985f3b", e);
                 }
             } else if ((resourceType instanceof CmsResourceTypePlain) || (resourceType instanceof CmsResourceTypeJsp)) {
                 originalSource = new String(content1);

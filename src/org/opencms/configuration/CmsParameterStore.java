@@ -173,7 +173,7 @@ public class CmsParameterStore {
         try {
             doc = CmsXmlUtils.unmarshalHelper(data, resolver, /*validate=*/true);
         } catch (CmsXmlException e) {
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn("Unexpected error: mobb-f647d5078a1bcaef2ac07c069e4ed904", e);
             doc = CmsXmlUtils.unmarshalHelper(data, resolver, false);
         }
         return parse(doc.getRootElement(), source);
