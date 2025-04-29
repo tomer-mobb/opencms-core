@@ -52,6 +52,7 @@ import java.util.Random;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.PageContext;
+import java.security.SecureRandom;
 
 /**
  * Generates a CSV file for a given list.<p>
@@ -192,7 +193,7 @@ public class CmsUsersCsvDownloadDialog extends A_CmsUserDataImexportDialog {
         }
         HttpServletResponse res = CmsFlexController.getController(getJsp().getRequest()).getTopResponse();
         res.setContentType("text/comma-separated-values");
-        String filename = "export_users" + new Random().nextInt(1024) + ".csv";
+        String filename = "export_users" + new SecureRandom().nextInt(1024) + ".csv";
         res.setHeader(
             "Content-Disposition",
             new StringBuffer("attachment; filename=\"").append(filename).append("\"").toString());
